@@ -1,0 +1,77 @@
+.experience-container {
+    padding: 2rem;
+    min-height: 100vh;
+    margin: 80px 170px;
+  }
+  
+  .experience-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  
+  .experience-year {
+    color: #0510ee; /* text-teal-400 */
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .experience-details {
+    border-left: 4px solid #a307f1; /* border-teal-400 */
+    padding-left: 1.8rem;
+  }
+  
+  .experience-role {
+    font-size:35px ;
+    font-weight: 700;
+    background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+  
+  .experience-description {
+    gap: 30px;
+    color: #e2e8f0; /* text-gray-300 */
+    margin-top: 20px;
+    font-size: 16px;
+    
+  }
+  
+  .experience-technologies {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .technology-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+  .technology-tag:hover{
+    transform: scale(1.12);
+    transition: 0.5s;
+    border-color: #B415FF;
+  }
+  

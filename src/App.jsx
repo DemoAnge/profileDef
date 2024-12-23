@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import React from 'react'
+import Navbar from './components/navbar/navbar'
+import HeroMe from './components/HeroMe/HeroMe'
+import About from './components/About/About'
+import Experience from './components/Experience/Experience'
+import Proyect from './components/Proyects/Proyect'
 
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <h2>hellow word</h2>
-    </>
+    <div>
+      <Navbar/>
+      <HeroMe/>
+      <About/>
+      <Proyect/>
+      <Experience/>
+    </div>
   )
 }
 

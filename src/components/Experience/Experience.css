@@ -1,0 +1,147 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Para respetar el espacio del navbar */
+  gap: 40px;
+  margin: 30px;
+  padding: 80px 20px; /* Ajusta el padding superior para compensar el navbar */
+  height: calc(100vh - 80px); /* Ajusta la altura para restar el tamaño del navbar */
+  box-sizing: border-box;
+  max-width: 1800px;
+}
+
+.experience-title {
+  position: relative;
+}
+
+.experience-title h1 {
+  font-size: 2.5rem;
+  padding: 0px 0px;
+}
+
+.experience-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.experience-year {
+  color: #8633cf;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.experience-details {
+  border-left: 4px solid #8633cf;
+  padding-left: 1.8rem;
+}
+
+.experience-role {
+  font-size: 35px; /* Tamaño original */
+  font-weight: 700;
+  background: linear-gradient(270deg, #8e2de2 50.41%, #00c6ff 90.25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-description {
+  gap: 30px;
+  color: #e2e8f0;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.experience-technologies {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ex-technology-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.ex-technology-tag:hover {
+  transform: scale(1.12);
+  transition: 0.5s;
+  border-color: #b940f1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 60px 20px; /* Ajusta el padding superior para pantallas más pequeñas */
+    height: calc(100vh - 60px);
+  }
+
+  .experience-title h1 {
+    font-size: 2rem; /* Ajusta el tamaño de letra en pantallas más pequeñas */
+  }
+
+  .experience-year {
+    font-size: 1.8rem; /* Ajuste menor */
+  }
+
+  .experience-role {
+    font-size: 28px; /* Reducido proporcionalmente */
+  }
+
+  .experience-description {
+    font-size: 14px; /* Ajustado para mejor visibilidad */
+  }
+
+  .ex-technology-tag {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .experience-container {
+    padding: 50px 15px; /* Ajusta el espacio para dispositivos muy pequeños */
+    height: calc(100vh - 50px);
+  }
+
+  .experience-title h1 {
+    font-size: 1.8rem; /* Títulos más pequeños */
+  }
+
+  .experience-year {
+    font-size: 1.2rem; /* Tamaño reducido */
+  }
+
+  .experience-role {
+    font-size: 20px; /* Más pequeño para pantallas menores */
+  }
+
+  .experience-description {
+    font-size: 12px; /* Texto más pequeño para adaptarse */
+  }
+
+  .ex-technology-tag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

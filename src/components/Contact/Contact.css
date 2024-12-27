@@ -153,9 +153,9 @@
     }
 
     .contact-right textarea {
-        width: calc(100% - 40px); /* Ajuste ancho textarea */
+        width: calc(100% - 70px); /* Ajuste ancho textarea */
         margin: 0 20px;
-        height: 200px;
+        height: 150px;
     }
 
     .contact-left h1,
@@ -304,3 +304,53 @@
         font-size: 0.8rem;
     }
 }
+@media (max-width: 410px) {
+    .contact {
+        margin-top: 130px; /* Ajuste del padding superior */
+    }
+
+    .contact-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-left p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 370px) {
+    .contact {
+        margin-top: 130px; /* Ajuste del padding superior */
+    }
+
+}
+@media (max-width: 360px) {
+    .contact {
+        margin-top: 250px; /* Ajuste del padding superior */
+    }
+
+}
+@media (max-width: 340px) {
+    .contact {
+        margin-top: 300px; /* Ajuste del padding superior */
+    }
+
+}
+@media (max-width: 320px) {
+    .contact {
+        margin-top: 400px; /* Ajuste del padding superior */
+    }
+
+}
+@media (max-width: 300px) {
+    .contact {
+        margin-top: 450px; /* Ajuste del padding superior */
+    }
+
+}
+@media (max-width: 300px) {
+    .contact {
+        margin-top: 450px; /* Ajuste del padding superior */
+    }
+
+}
+

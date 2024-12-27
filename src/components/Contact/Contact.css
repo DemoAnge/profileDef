@@ -5,10 +5,10 @@
     justify-content: center;
     gap: 40px;
     margin: 0 auto;
-    padding: 20px 10px; /* Respeta el navbar */
-    min-height: 100vh; /* Altura mínima para ocupar la ventana si está en visión */
+    padding: 100px 10px 20px; /* Aumenta espacio superior */
+    min-height: 100vh; /* Altura mínima para evitar solapamientos */
     box-sizing: border-box;
-    max-width: 1200px; /* Limitar el ancho máximo */
+    max-width: 1200px;
 }
 
 /* Título */
@@ -19,7 +19,7 @@
 
 .contact-title h1 {
     padding: 0px;
-    font-size: 2.5rem; /* Tamaño reducido */
+    font-size: 2.5rem; /* Ajustado tamaño */
     font-weight: 800;
 }
 
@@ -28,7 +28,7 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    width: 100px; /* Reducido el tamaño de la imagen */
+    width: 100px;
 }
 
 /* Sección de contacto */
@@ -37,7 +37,7 @@
     gap: 5px;
     width: 100%;
     justify-content: center;
-    margin-top: 20px; /* Espacio entre secciones */
+    margin-top: 20px; /* Espaciado entre título y formulario */
 }
 
 /* Columna izquierda */
@@ -50,7 +50,7 @@
 }
 
 .contact-left h1 {
-    font-size: 1.8rem; /* Reducido tamaño */
+    font-size: 1.8rem; /* Tamaño reducido */
     font-weight: 700;
     background: linear-gradient(270deg, #8e2de2 80%, #00c6ff 100%);
     background-clip: text;
@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 1.2rem; /* Reducir fuente */
+    font-size: 1.2rem;
 }
 
 .contact-detail {
@@ -89,32 +89,32 @@
 }
 
 .contact-right label {
-    font-size: 0.8rem; /* Reducido tamaño */
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
 .contact-right input {
     border: none;
-    width: 100%; /* Adaptable */
-    height: 45px; /* Reducido */
+    width: 100%;
+    height: 45px;
     padding-left: 20px;
     border-radius: 5px;
     background-color: #32323c;
     color: #A0A0A0;
     font-family: Outfit;
-    font-size: 0.9rem; /* Reducido tamaño de letra */
+    font-size: 0.9rem;
 }
 
 .contact-right textarea {
     border: none;
-    width: 100%; /* Adaptable */
+    width: 100%;
     padding: 20px;
     height: 200px;
     border-radius: 5px;
     background-color: #32323c;
     color: #A0A0A0;
     font-family: Outfit;
-    font-size: 0.9rem; /* Reducido tamaño de letra */
+    font-size: 0.9rem;
 }
 
 .contact-submit {
@@ -123,7 +123,7 @@
     padding: 5px 20px;
     border-radius: 50px;
     background: linear-gradient(264deg, #8e2de2 -5.09%, #00c6ff 100%);
-    font-size: 0.8rem; /* Reducido tamaño */
+    font-size: 0.8rem;
     cursor: pointer;
     font-weight: 550;
 }
@@ -136,72 +136,62 @@
 /* Responsividad */
 @media (max-width: 1200px) {
     .contact {
-        padding-top: 70px;
-        margin: 0 20px; /* Respeta márgenes laterales solo en vista responsiva */
+        padding-top: 150px; /* Ajuste del padding superior */
+        margin: 0 20px; /* Márgenes laterales */
     }
 
     .contact-section {
         flex-direction: row;
         gap: 10px;
     }
-    .contact-title h1 {
-        padding: 0px;
-        font-size: 2.5rem; /* Tamaño reducido */
-        font-weight: 800;
-    }
 
     .contact-right input {
-        width: 80%; /* Ajusta el ancho a un porcentaje para ser más flexible */
-        margin: 0 10px; /* Añade márgenes laterales */
-        height: 40px; /* Reduce la altura */
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+        width: calc(100% - 40px); /* Ajuste ancho input */
+        margin: 0 20px;
+        height: 40px;
+        font-size: 0.9rem;
     }
 
     .contact-right textarea {
-        width: 80%;
+        width: calc(100% - 40px); /* Ajuste ancho textarea */
+        margin: 0 20px;
         height: 200px;
     }
 
     .contact-left h1,
     .contact-title h1 {
-        font-size: 1.5rem; /* Ajusta el tamaño del título */
+        font-size: 1.5rem;
     }
 
     .contact-left p {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
+        font-size: 1rem;
     }
 
     .contact-submit {
-        width: 80%; /* Ajusta el ancho del botón */
-        font-size: 0.8rem; /* Ajusta el tamaño de la fuente */
+        width: 80%; /* Ajuste botón */
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 860px) {
     .contact {
-        padding: 70px 20px 0;
-        margin: 0 15px; /* Márgenes ajustados en pantallas más pequeñas */
-    }
-    .contact-title h1 {
-        font-size: 2rem; /* Título más pequeño */
+        margin: 100px 20px; /* Ajuste margen superior */
     }
 
     .contact-section {
-        flex-direction: column; /* Cambia a columnas */
+        flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .contact-left,
     .contact-right {
-        max-width: 100%; /* Usa todo el ancho */
-        margin: 0; /* Elimina el margen izquierdo */
+        max-width: 100%; /* Ajuste ancho 100% */
+        margin: 0; /* Elimina margen */
     }
 
     .contact-right input {
-        height: 35px; /* Más pequeño */
-    }
-    .contact-right label{
-        font-size: 0.7rem;
+        height: 35px;
     }
 
     .contact-left h1,
@@ -218,33 +208,99 @@
     }
 
     .contact-submit {
-        font-size: 0.7rem; /* Botón más pequeño */
+        font-size: 0.7rem;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     .contact {
-        padding: 70px 20px 0;
-        margin: 0 15px;
+        margin: 150px 20px; /* Ajuste margen superior */
     }
 
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%; /* Ajuste ancho 100% */
+        margin: 0; /* Elimina margen */
+    }
+
+    .contact-right input {
+        height: 35px;
+    }
+
+    .contact-left h1,
     .contact-title h1 {
-        font-size: 2rem; /* Título más pequeño */
+        font-size: 1.4rem;
     }
 
     .contact-left p {
-        font-size: 0.6rem; /* Reduce la descripción */
+        font-size: 0.8rem;
     }
-}
-.contact-right label{
-    font-size: 0.6rem;
-}
 
-    .contact-right input {
-        height: 30px; /* Ajustar altura */
+    .contact-details {
+        font-size: 1rem;
     }
 
     .contact-submit {
         font-size: 0.7rem;
     }
+}
+@media (max-width: 500px) {
+    .contact {
+       margin: 230px 0 0;
+    }
 
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%; /* Ajuste ancho 100% */
+        margin: 0; /* Elimina margen */
+    }
+
+    .contact-right input {
+        height: 35px;
+    }
+
+    .contact-left h1,
+    .contact-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .contact-left p {
+        font-size: 0.8rem;
+    }
+
+    .contact-details {
+        font-size: 1rem;
+    }
+
+    .contact-submit {
+        font-size: 0.7rem;
+    }
+}
+
+/* Última media query para resoluciones más pequeñas */
+@media (max-width: 450px) {
+    .contact {
+        margin: 20px;
+        padding-top: 80px; /* Ajuste del padding superior */
+    }
+
+    .contact-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-left p {
+        font-size: 0.8rem;
+    }
+}

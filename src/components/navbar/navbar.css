@@ -1,30 +1,196 @@
-.navbar{
+body {
+    padding-top: 100px; /* Compensa la altura del navbar */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    background: #161513;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 70px;
-
-
+    padding: 0 calc(5vw); /* Padding dinámico basado en el ancho de la pantalla */
+    height: 10vh; /* Altura relativa al alto de la pantalla */
+    box-sizing: border-box;
 }
-.nav-menu{
+
+/* Logo */
+.logo {
+    width: calc(15vw); /* Dinámico en función del ancho de la pantalla */
+    max-width: 180px; /* Limita el tamaño máximo */
+    height: auto;
+}
+
+/* Menú de navegación */
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 60px;
-    font-size: 16px;
+    gap: 2vw; /* Espaciado dinámico */
+    font-size: 0.9rem;
 }
-.nav-connect{
-    padding: 20px 40px;
+
+/* Elementos del menú */
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    cursor: pointer;
+}
+
+.nav-menu li img {
+    width: calc(8vw); /* Dinámico */
+    height: 40px;
+    margin: auto;
+}
+
+/* Enlaces del menú */
+.anchor-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Botón de conexión */
+.nav-connect {
+    padding: 0.3em 0.5em;
     border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
-    font-size: 16px;
+    background: linear-gradient(267deg, #8e2de2 0.36%, #00c6ff 102.06%);
+    font-size: 0.8rem;
     cursor: pointer;
     transition: 0.5s;
+    margin-left: 1.5vw;
 }
-img{
-    width: 200px;
-    height: 110px;
-}
-.nav-connect:hover{
+
+.nav-connect:hover {
     transform: scale(1.05);
+}
+.nav-mob-close{
+    display: none;
+}
+.nav-mob-open{
+    display: none;
+}
+
+
+@media (min-width: 851px) and (max-width: 1250px) {
+    .navbar {
+        padding: 0 calc(4vw);
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        gap: 2vw;
+    }
+
+    .nav-connect {
+        display: none; /* Ocultar botón conectar */
+    }
+}
+
+/* Diseño móvil desde 850px hasta 244px */
+@media (max-width: 850px) {
+    .navbar {
+        padding: 0 calc(3vw);
+    }
+
+    .logo {
+        width: 250px;
+        
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 0;
+        right: -100%;
+        gap: 2vh;
+        background-color: rgba(50, 50, 53, 0.85);
+        width: 30vw; /* Ancho dinámico del menú */
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        overflow-y: auto;
+    }
+
+    .nav-menu.open {
+        
+        right: 0;
+        
+    }
+
+    .nav-menu li {
+        padding-left: calc(2vw);
+        flex-direction: row;
+        gap: 1vw;
+        margin-top: 2vh;
+    }
+
+    .nav-menu li img {
+        width: calc(10vw);
+    }
+
+    .nav-menu li a {
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .nav-mob-open {
+        display: block;
+        position: fixed;
+        right: calc(4vw);
+        top: calc(2vh);
+        width: 6vw;
+        height: 10vw;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: relative;
+        top: calc(6vh);
+        left: calc(2vw);
+        margin-bottom: calc(1vh);
+        width: calc(6vw);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 calc(2vw);
+        height: 8vh;
+    }
+
+    .logo {
+        width: 250px;
+        height: 80px;
+    }
+
+    .nav-menu {
+        width: calc(50vw);
+        height: 100vh; /* Menú más pequeño en pantallas pequeñas */
+    }
+
+    .nav-menu li a {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
 }

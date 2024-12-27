@@ -1,0 +1,210 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px; /* Espaciado interno */
+  margin: 40px; /* Centrar la sección */
+  max-width: 1800px; /* Ancho máximo */
+  min-height: 100vh; /* Altura mínima según el contenido */
+  box-sizing: border-box; /* Incluir padding en el cálculo de tamaño */
+}
+
+.skill-title {
+  position: relative;
+  text-align: center;
+}
+
+.skill-title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0; /* Evitar espacios innecesarios */
+}
+
+.skill-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
+}
+
+.skill-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Espacio entre las mitades */
+  flex-wrap: wrap; /* Ajuste automático en resoluciones pequeñas */
+}
+
+.skill-right {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Ocupa la mitad con espacio entre columnas */
+  gap: 20px;
+}
+
+.skill-left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas por defecto */
+  gap: 20px;
+  width: 48%; /* Igual que .skill-right */
+}
+
+.right-title {
+  text-align: center;
+}
+
+.right-title h1 {
+  font-size: 1.5rem;
+  margin: 0; /* Quitar márgenes extra */
+}
+
+.skill {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.skill p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill hr {
+  width: 30%; 
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #8e2de2 -5.09%, #00c6ff 106.28%);
+}
+
+.skill span {
+  font-size: 0.4rem; /* Tamaño pequeño */
+  font-weight: 400;
+  margin-top: 2px;
+  position: inherit;
+}
+
+.skill-archievements {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap; /* Permitir ajuste vertical */
+}
+
+.skill-archievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.5s;
+}
+
+.skill-archievement h1 {
+  font-size: 35px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #8e2de2 50.41%, #00c6ff 90.25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-archievement p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-certificate {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card-certificate img {
+  width: 100%;
+  height: 185px;
+  
+}
+
+.card-certificate span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  background: rgba(141, 45, 226, 0.634);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-certificate:hover span {
+  opacity: 1;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .skill{
+    margin: 20px;
+  }
+  .skill-left {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+
+
+  .skill-right {
+    width: 100%;
+  }
+
+  .skill-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-certificate img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-left {
+    grid-template-columns: repeat(1, 1fr); /* Una columna */
+  }
+  .skill-title h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0; /* Evitar espacios innecesarios */
+  }
+
+  .skill-archievements {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-certificate img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 495px) {
+  .skill p {
+    font-size: 14px;
+  }
+
+  .skill-archievement h1 {
+    font-size: 30px;
+  }
+  .card-certificate img {
+    width: 100%;
+  }
+}

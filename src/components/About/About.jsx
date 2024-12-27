@@ -1,13 +1,15 @@
 import React from 'react'
 import "./About.css"
 import me from "../../assets/me.jpg"
+import logo_pat from "../../assets/dragon.svg"
+
 
 const About = () => {
   return (
-    <div className='about'>
+    <div id="about" className='about'>
         <div className='about-title'>
-            <h1>Acerca de Mi</h1>
-            <img src="" alt="" />
+            <h1>About Me</h1>
+            <img src={logo_pat} alt="" />
             
 
         </div>
@@ -17,33 +19,29 @@ const About = () => {
             </div>
             <div className="about-right">
                 <div className="about-para">
-                    <p>aqui va lo q soylfhfkhgkyhnkjknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnyjknd</p>
-                    <p>el objetivo profesional los cursos q realice etsksjknjbfjfgnjkfghknjjkjnfnjkkkkkkkkkkkkkk</p>
+                    <p>I'm a final-year Software Engineering student with experience in projects that integrate modern technologies and best development practices. In my free time, I explore topics related to cybersecurity and networks in Linux environments, enhancing my skills as a developer.</p>
+                    <p>My goal is to grow as a professional in Full Stack web development, applying new knowledge in technology and contributing to the success of organizations through effective and secure solutions.</p>
                 </div>
                 <div className="about-skills">
-                    <div className="about-skill"> <p>Recat JS </p> <hr style={{width:"50%"}} /> </div>
-                    <div className="about-skill"> <p>Angular </p> <hr style={{width:"50%"}} /></div>
-                    <div className="about-skill"> <p>Node </p><hr style={{width:"50%"}} /></div>
-                    <div className="about-skill"> <p>Python</p> <hr style={{width:"50%"}} /></div>
+                    <h2>Knowledge</h2>
+
+                    <div className="about-skill"> <p>Development FrontEnd</p> <hr style={{width:"50%"}} /> <span className="about-level">Advance</span></div>
+                    <div className="about-skill"> <p>Development BackEnd</p> <hr style={{width:"50%"}} /><span className="about-level">Intermediate</span></div>
+                    <div className="about-skill"> <p>Database Management </p> <hr style={{width:"50%"}} /><span className="about-level">Intermediate</span></div>
+                    <div className="about-skill"> <p>Network Security</p><hr style={{width:"50%"}} /><span className="about-level">Basic</span></div>
+                    <div className="about-skill"> <p>Auditor</p><hr style={{width:"50%"}} /><span className="about-level">Basic</span></div>
+
                     
                 </div>                
             </div>
         </div>
         <div className="about-archievements">
             <div className="about-archievement">
-                <h1>10+</h1>
-                <p>Años de experiencia</p>
+                <h1>Englis</h1>
+                <p> B1 Intermediate</p>
             </div>
-            <hr />
-            <div className="about-archievement">
-                <h1>90+</h1>
-                <p>proyectos completados</p>
-            </div>
-            <hr />
-            <div className="about-archievement">
-                <h1>10+</h1>
-                <p>Años de experiencia</p>
-            </div>
+            
+            
         </div>
 
 

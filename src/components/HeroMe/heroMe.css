@@ -21,8 +21,32 @@
     max-width: 50%; /* Controla el ancho máximo del bloque */
     padding: 10px; /* Espaciado interno */
 }
+.imgme{
+    width:100% ; /* Tamaño fijo para la imagen */
+    height: calc(100% + 10rem);
+    max-width: 350px;
+    border-radius: 50%; /* Hace la imagen circular */
+    background: linear-gradient(270deg, #8e2de2, #ffffff);
+    background-size: 400% 400%; /* Suaviza el gradiente animado */
+    animation: border-spin 4s linear infinite; /* Anima el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la imagen dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar */
+    position: relative;
+}
+.img-me{
+    width: 95%;
+    max-width: 350px; /* Tamaño relativo para ajustarse dentro del div */
+    height: auto;
+    border-radius: 50%; /* Mantiene la imagen circular */
+    display: block;
+    background: linear-gradient(270deg, #8e2de2 10%, #00c6ff 100%);
 
-.hero-right img {
+}
+
+.socialmedia a img {
     width: 100%; /* Imagen ajustable */
     max-width: 250px; /* Máximo tamaño de la imagen */
     height: auto; /* Mantiene la relación de aspecto */
@@ -162,5 +186,18 @@
 
     .socialmedia a img {
         width: 20px; /* Iconos más pequeños */
+    }
+}
+
+/* Animación de rotación */
+@keyframes border-spin {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

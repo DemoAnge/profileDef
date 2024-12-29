@@ -4,7 +4,7 @@ import inv3 from "../assets/imgproyects/inv3.png"
 import network from "../assets/imgproyects/reconition.jpg"
 import network2 from "../assets/imgproyects/cnn.png"
 import mprocess from "../assets/imgproyects/doc.jpeg"
-import caatstro from "../assets/imgproyects/asis.jpg"
+
 const projects_data =[
     {
     title: "CNN Clothing Color Recognition",
@@ -12,7 +12,7 @@ const projects_data =[
     participation: "Building the convolutional neural network using the YOLO library, training and testing the model and developing the interface to use the system.",
     technologies: ["Python"],
     img: [network, network2],
-    url:""
+    url:"https://github.com/DemoAnge/redCnnIA"
     },
     {
     title: "InvControl (Inventory Management",
@@ -20,7 +20,7 @@ const projects_data =[
     participation: "I served as the project manager and was responsible for FrontEnd development of the modules.",
     technologies: ["Angular","Tailwind","Python","MySQL"],
     img: [inv1,inv2,inv3],
-    url:"https://tigselemaalex.github.io/portfolio-vuejs/"
+    url:"https://github.com/Invcontrol-Back/dasfrontend"
     },
     {
         title: "Document Process Map",
@@ -30,14 +30,6 @@ const projects_data =[
         img: [mprocess],
         url:""
         },
-        {
-            title: "Attendance and Cadastral Management System",
-            description: "I developed a mobile application for the supervisors of the municipal company EP-EMA in Ambato. The system allows attendance tracking of registered individuals occupying the company’s spaces, verifying pending debt notifications for unpaid spaces and automated report generation.",
-            participation: "In this project, I was the project manager, responsible for documentation and developing some modules of the application.",
-            technologies: ["React Native","Tailwind",,"MySQL","Node Js" ],
-            img: [caatstro],
-            url:""
-            },
-
+        
 ];
 export default projects_data

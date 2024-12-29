@@ -37,15 +37,32 @@
     align-items: center; /* Centra verticalmente los elementos */
     margin: 20px;
 }
+.about-left{
+    width:100% ; /* Tamaño fijo para la imagen */
+    height: calc(100% + 10rem);
+    max-width: 350px;
+    border-radius: 20%; /* Hace la imagen circular */
+    background: linear-gradient(270deg, #8e2de2, #ffffff);
+    background-size: 400% 400%; /* Suaviza el gradiente animado */
+    animation: border-spin 4s linear infinite; /* Anima el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la imagen dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar */
+    position: relative;
+}
 
 
 .about-left img {
-    width: 280px; /* Imagen ajustable */
-     /* Máximo tamaño de la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    object-fit: cover; /* Asegura que la imagen se vea bien */
-    margin: 0 auto; 
+    width: 95%;
+    max-width: 350px; /* Tamaño relativo para ajustarse dentro del div */
+    height: auto;
+    
+    border-radius: 20%; /* Mantiene la imagen circular */
+    display: block;
+    background: linear-gradient(270deg, #8e2de2 10%, #00c6ff 100%);
+
 }
 
 .about-right {
@@ -167,6 +184,9 @@
     .about-right {
         text-align: center; /* Centra el contenido */
     }
+    .about-title h1 {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -175,6 +195,17 @@
         padding-top: 80px; /* Mantiene el espacio del navbar */
     }
     .about-title h1 {
-        font-size: 2rem; /* Ajustar el tamaño del título */
+        font-size: 1.8rem; /* Ajustar el tamaño del título */
+    }
+}
+@keyframes border-spin {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

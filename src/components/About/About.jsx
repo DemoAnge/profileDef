@@ -1,6 +1,6 @@
 import React from 'react'
 import "./About.css"
-import me from "../../assets/me.png"
+import me from "../../assets/me.jpeg"
 import logo_pat from "../../assets/dragon.svg"
 
 

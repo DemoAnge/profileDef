@@ -1,6 +1,6 @@
 import React from 'react'
 import "./heroMe.css"
-import me from  "../../assets/me.png"
+import me from  "../../assets/me.jpeg"
 import linked  from  "../../assets/socialmedia/linked.svg"
 import github  from  "../../assets/socialmedia/git2.png"
 import facebook  from  "../../assets/socialmedia/facebok.svg"

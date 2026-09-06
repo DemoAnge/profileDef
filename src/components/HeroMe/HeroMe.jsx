@@ -7,19 +7,18 @@ const HeroMe = () => {
     <section id="home" className="hero section">
       <div className="hero-grid">
         <div className="hero-copy">
-          <span className="hero-badge mono">Full-Stack Software Engineer</span>
+          <span className="hero-kicker">Full-Stack Software Engineer</span>
           <h1 className="hero-name">
-            Angel <span className="hero-accent">Pilamunga</span>
+            This is your engineer,{" "}
+            <span className="hero-accent">Angel Pilamunga</span>
           </h1>
-          <p className="hero-role">
-            Junior / Semi-Senior · Ambato, Ecuador · React · Angular · Node.js · Django
-          </p>
           <p className="hero-lead">
-            Building reliable web apps end to end — UI, API, and data — open to remote or local roles.
+            Junior / Semi-Senior based in Ambato, Ecuador. Building reliable web apps end to end —
+            UI, API, and data — open to remote or local roles.
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn-primary">Get in touch</a>
-            <a href="#project" className="btn-ghost">View projects</a>
+            <a href="#project" className="btn-ghost">View portfolio</a>
           </div>
           <div className="hero-social">
             <a href="https://github.com/DemoAnge" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">

@@ -1,8 +1,8 @@
 .skills-icons {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: 14px;
+  margin-bottom: 48px;
 }
 
 .skill-icon-card {
@@ -11,18 +11,16 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 18px 12px;
-  min-height: 96px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 20px 12px;
+  min-height: 100px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .skill-icon-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+  background: var(--surface-hover);
 }
-
-.skill-icon { filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.2)); }
 
 .skill-icon-label {
   font-size: var(--fs-xs);
@@ -33,16 +31,18 @@
 
 .certs-title {
   font-size: var(--fs-xs);
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
 .cert-card {
@@ -70,7 +70,7 @@
   font-size: var(--fs-xs);
   font-weight: 600;
   color: #fff;
-  background: rgba(3, 7, 18, 0.72);
+  background: rgba(10, 10, 10, 0.78);
   opacity: 0;
   transition: opacity 0.2s ease;
 }

@@ -6,23 +6,23 @@
 }
 
 .about-photo-wrap {
-  padding: 3px;
   border-radius: var(--radius-card);
-  background: var(--gradient-brand);
-  box-shadow: var(--shadow-card), 0 0 24px rgba(34, 211, 238, 0.12);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--surface);
 }
 
 .about-photo {
   width: 100%;
   display: block;
-  border-radius: calc(var(--radius-card) - 2px);
   object-fit: cover;
   aspect-ratio: 4 / 5;
-  background: var(--surface-solid);
+  filter: grayscale(0.25);
+  background: var(--bg-elevated);
 }
 
 .about-body {
-  padding: 24px 26px;
+  padding: 28px 30px;
 }
 
 .about-para {
@@ -37,15 +37,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .meta-chip {
   font-size: var(--fs-xs);
-  color: var(--cyan);
-  border: 1px solid rgba(34, 211, 238, 0.22);
-  background: rgba(34, 211, 238, 0.06);
-  padding: 5px 10px;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft);
+  padding: 6px 12px;
   border-radius: var(--radius-pill);
 }
 

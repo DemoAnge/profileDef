@@ -1,15 +1,15 @@
 import "./navbar.css"
 import { useRef, useState, useEffect } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import { HiOutlineHome, HiOutlineUser, HiOutlineCodeBracket, HiOutlineFolder, HiOutlineBriefcase, HiOutlineEnvelope, HiBars3, HiXMark } from "react-icons/hi2"
+import { HiBars3, HiXMark } from "react-icons/hi2"
 
 const links = [
-  { id: "home", label: "Home", Icon: HiOutlineHome, offset: 0 },
-  { id: "about", label: "About", Icon: HiOutlineUser, offset: 50 },
-  { id: "skill", label: "Skills", Icon: HiOutlineCodeBracket, offset: 50 },
-  { id: "project", label: "Projects", Icon: HiOutlineFolder, offset: 50 },
-  { id: "experience", label: "Exp", Icon: HiOutlineBriefcase, offset: 50 },
-  { id: "contact", label: "Contact", Icon: HiOutlineEnvelope, offset: 50 },
+  { id: "home", label: "Home", offset: 0 },
+  { id: "about", label: "About", offset: 50 },
+  { id: "services", label: "Services", offset: 50 },
+  { id: "project", label: "Portfolio", offset: 50 },
+  { id: "experience", label: "Experience", offset: 50 },
+  { id: "contact", label: "Contact", offset: 50 },
 ]
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
     <header className="navbar">
       <a href="#home" className="nav-brand" title="Angel Pilamunga">
         <span className="nav-brand-mark">AP</span>
-        <span className="nav-brand-text">Angel.P</span>
+        <span className="nav-brand-text">Angel Pilamunga</span>
       </a>
 
       <button
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       <nav ref={menuRef} className={`nav-menu${open ? " open" : ""}`} aria-label="Primary">
         <ul>
-          {links.map(({ id, label, Icon, offset }) => (
+          {links.map(({ id, label, offset }) => (
             <li key={id}>
               <AnchorLink
                 className={`nav-link${menu === id ? " active" : ""}`}
@@ -63,8 +63,7 @@ const Navbar = () => {
                 onClick={() => handleNav(id)}
                 title={label}
               >
-                <Icon className="nav-link-icon" size={16} aria-hidden />
-                <span className="nav-link-label">{label}</span>
+                {label}
               </AnchorLink>
             </li>
           ))}
@@ -72,7 +71,7 @@ const Navbar = () => {
       </nav>
 
       <AnchorLink className="nav-cta" offset={50} href="#contact" title="Get in touch">
-        Connect
+        Get in touch
       </AnchorLink>
     </header>
   )

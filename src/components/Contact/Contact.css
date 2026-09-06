@@ -1,11 +1,11 @@
 .contact-section {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 16px;
+  gap: 20px;
 }
 
 .contact-left {
-  padding: 22px 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -13,16 +13,14 @@
 
 .contact-left h3 {
   font-size: var(--fs-h2);
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .contact-left p {
   font-size: var(--fs-small);
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .contact-detail {
@@ -31,11 +29,12 @@
   gap: 8px;
   margin-top: auto;
   font-size: var(--fs-small);
-  color: var(--cyan);
+  font-weight: 500;
+  color: var(--accent);
 }
 
 .contact-right {
-  padding: 22px 24px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -53,7 +52,7 @@
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(26, 35, 50, 0.85);
+  background: var(--bg-elevated);
   color: var(--text);
   font-family: "Inter", sans-serif;
   font-size: var(--fs-small);
@@ -62,12 +61,12 @@
 }
 
 .contact-right input {
-  height: 42px;
-  padding: 0 12px;
+  height: 44px;
+  padding: 0 14px;
 }
 
 .contact-right textarea {
-  padding: 10px 12px;
+  padding: 12px 14px;
   min-height: 140px;
   resize: vertical;
 }
@@ -75,32 +74,32 @@
 .contact-right input:focus,
 .contact-right textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--glow-soft);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .contact-result {
   font-size: var(--fs-xs);
-  color: var(--cyan);
+  color: var(--accent);
 }
 
 .contact-submit {
   align-self: flex-start;
-  margin-top: 8px;
+  margin-top: 10px;
   border: none;
-  padding: 10px 18px;
+  padding: 12px 22px;
   border-radius: var(--radius-pill);
-  background: var(--gradient-cta);
+  background: var(--accent);
   color: #fff;
   font-size: var(--fs-small);
   font-weight: 600;
   cursor: pointer;
   font-family: "Inter", sans-serif;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .contact-submit:hover {
+  background: #3d57e8;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-glow);
 }
 
 @media (max-width: 800px) {

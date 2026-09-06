@@ -1,34 +1,62 @@
-.experience-list {
+.experience-timeline {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
+  padding-left: 28px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-strong);
 }
 
 .experience-item {
+  position: relative;
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 16px;
-  padding: 16px 18px;
-  border-left: 2px solid transparent;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: start;
 }
 
-.experience-item:hover {
-  border-left-color: var(--cyan);
-  transform: translateX(2px);
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+.experience-marker {
+  position: absolute;
+  left: -25px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent-border);
 }
 
 .experience-year {
   font-size: var(--fs-xs);
-  color: var(--cyan);
+  font-weight: 600;
+  color: var(--accent);
   letter-spacing: 0.02em;
-  padding-top: 2px;
+  padding-top: 16px;
+}
+
+.experience-details {
+  padding: 18px 20px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.experience-details:hover {
+  border-color: var(--accent-border);
+  background: var(--surface-hover);
 }
 
 .experience-role {
   font-size: var(--fs-h2);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: var(--tracking-tight);
   color: var(--text);
   margin-bottom: 8px;
@@ -38,7 +66,7 @@
 .experience-description {
   font-size: var(--fs-small);
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.55;
 }
 
@@ -53,4 +81,5 @@
     grid-template-columns: 1fr;
     gap: 8px;
   }
+  .experience-year { padding-top: 0; }
 }

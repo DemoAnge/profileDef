@@ -6,9 +6,14 @@ import "./Proyect.css"
 const Proyect = () => {
   return (
     <section id="project" className="proyects section">
-      <div className="section-head">
-        <span className="section-kicker">03</span>
-        <h2 className="section-title">Projects</h2>
+      <div className="section-head center">
+        <span className="section-kicker">Portfolio</span>
+        <h2 className="section-title">
+          Selected <span className="accent">projects</span>
+        </h2>
+        <p className="section-sub">
+          Product and research work across inventory, document management, and academic systems.
+        </p>
       </div>
       <div className="proyects-grid">
         {projects_data.map((project, index) => (
@@ -32,7 +37,7 @@ const ProjectCard = ({ project }) => {
   }, [project.img])
 
   return (
-    <article className="proyect-card glass-card">
+    <article className="proyect-card card">
       <div className="proyect-image-container">
         {project.img && project.img.length > 0 ? (
           <img
@@ -48,11 +53,11 @@ const ProjectCard = ({ project }) => {
         <h3 className="proyect-name">{project.title}</h3>
         <p className="proyect-description">{project.description}</p>
         <p className="proyect-participation">
-          <span className="mono label">Role</span> {project.participation}
+          <span className="label">Role</span> {project.participation}
         </p>
         <div className="proyect-technologies">
           {project.technologies.map((tech, idx) => (
-            <span key={idx} className="tech-tag mono">{tech}</span>
+            <span key={idx} className="tech-tag">{tech}</span>
           ))}
         </div>
         <div className="proyect-links">

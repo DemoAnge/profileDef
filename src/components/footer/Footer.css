@@ -1,25 +1,13 @@
 .footer {
   border-top: 1px solid var(--border);
   margin-top: 24px;
-  position: relative;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(180px, 40%);
-  height: 1px;
-  background: var(--gradient-brand);
-  opacity: 0.75;
+  background: var(--bg);
 }
 
 .footer-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,28 +24,46 @@
 }
 
 .footer-mark {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
-  border-radius: 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: #031018;
-  background: var(--gradient-brand);
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
   flex-shrink: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--text);
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
 }
 
 .footer-copy {
   font-size: var(--fs-xs);
   color: var(--muted);
-}
-
-.footer-copy span {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
 }
 
 @media (max-width: 600px) {
@@ -65,4 +71,5 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .footer-copy { text-align: left; }
 }

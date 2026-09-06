@@ -46,13 +46,15 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section">
       <div className="section-head">
-        <span className="section-kicker">05</span>
-        <h2 className="section-title">Contact</h2>
+        <span className="section-kicker">Contact</span>
+        <h2 className="section-title">
+          Let&apos;s <span className="accent">work together</span>
+        </h2>
       </div>
 
       <div className="contact-section">
-        <div className="contact-left glass-card">
-          <h3>Let&apos;s talk</h3>
+        <div className="contact-left card">
+          <h3>Get in touch</h3>
           <p>
             I&apos;m currently available to take on new projects, so feel free to message me about anything you&apos;d like me to work on. You can contact me anytime.
           </p>
@@ -62,14 +64,14 @@ const Contact = () => {
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="contact-right glass-card">
+        <form onSubmit={onSubmit} className="contact-right card">
           <label htmlFor="name">Name</label>
           <input id="name" type="text" placeholder="Your name" name="name" required />
           <label htmlFor="email">Email</label>
           <input id="email" type="email" required placeholder="you@email.com" name="email" />
           <label htmlFor="message">Message</label>
           <textarea id="message" name="message" rows={7} placeholder="How can I help?" required />
-          {result && <p className="contact-result mono">{result}</p>}
+          {result && <p className="contact-result">{result}</p>}
           <button type="submit" className="contact-submit">Send message</button>
         </form>
       </div>

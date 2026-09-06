@@ -5,8 +5,10 @@ const About = () => {
   return (
     <section id="about" className="about section">
       <div className="section-head">
-        <span className="section-kicker">01</span>
-        <h2 className="section-title">About</h2>
+        <span className="section-kicker">About</span>
+        <h2 className="section-title">
+          A bit about <span className="accent">who I am</span>
+        </h2>
       </div>
 
       <div className="about-layout">
@@ -14,7 +16,7 @@ const About = () => {
           <img src={me} alt="Angel Pilamunga" className="about-photo" />
         </div>
 
-        <div className="about-body glass-card">
+        <div className="about-body card">
           <div className="about-para">
             <p>
               Full-Stack Software Engineer with about one year of hands-on experience building web apps for cooperatives and university research in Ambato, Ecuador. B.Sc. in Software Engineering from Universidad Técnica de Ambato (UTA, 2020–2025). Actively looking for Junior or Semi-Senior full-stack roles, remote or local.
@@ -27,8 +29,8 @@ const About = () => {
             </p>
           </div>
           <div className="about-meta">
-            <span className="meta-chip mono">EN · B1 Intermediate</span>
-            <span className="meta-chip mono">Ambato, EC</span>
+            <span className="meta-chip">EN · B1 Intermediate</span>
+            <span className="meta-chip">Ambato, EC</span>
           </div>
         </div>
       </div>

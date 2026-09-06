@@ -1,191 +1,56 @@
-﻿.experience-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  min-height: auto;
-  height: auto;
-  box-sizing: border-box;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.experience-title {
-  position: relative;
-}
-
-.experience-title h1 {
-  font-size: var(--fs-h1);
-  font-weight: 700;
-  letter-spacing: var(--tracking-tight);
-  padding: 0;
-}
-
-.experience-title img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 100px;
-}
-
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
+  gap: 12px;
 }
 
 .experience-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  padding: 24px 28px;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.experience-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-brand);
-  opacity: 0.85;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 16px 18px;
+  border-left: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .experience-item:hover {
-  border-color: var(--border-strong);
+  border-left-color: var(--cyan);
+  transform: translateX(2px);
   box-shadow: var(--shadow-glow), var(--shadow-card);
-  transform: translateY(-2px);
 }
 
 .experience-year {
-  color: var(--accent);
-  font-size: var(--fs-h2);
-  font-weight: 600;
-  letter-spacing: var(--tracking-tight);
-}
-
-.experience-details {
-  border-left: 3px solid var(--accent);
-  padding-left: 1.25rem;
-  width: 100%;
+  font-size: var(--fs-xs);
+  color: var(--cyan);
+  letter-spacing: 0.02em;
+  padding-top: 2px;
 }
 
 .experience-role {
   font-size: var(--fs-h2);
-  font-weight: 700;
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 650;
   letter-spacing: var(--tracking-tight);
-  line-height: var(--lh-tight);
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.35;
 }
 
 .experience-description {
-  gap: 16px;
+  font-size: var(--fs-small);
   color: var(--text-secondary);
-  margin-top: 12px;
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
+  margin-bottom: 10px;
+  line-height: 1.55;
 }
 
 .experience-technologies {
-  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
-.ex-technology-tag {
-  font-family: "JetBrains Mono", monospace;
-  padding: 0.3rem 0.75rem;
-  border-radius: var(--radius-pill);
-  font-size: var(--fs-xs);
-  font-weight: 500;
-  background: var(--surface-elevated);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: border-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ex-technology-tag:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-strong);
-  color: var(--accent);
-  box-shadow: 0 0 14px rgba(34, 211, 238, 0.22);
-}
-
-@media (max-width: 768px) {
-  .experience-container {
-    padding: 48px 24px;
-    height: auto;
-    min-height: auto;
-  }
-
-  .experience-title h1 {
-    font-size: var(--fs-h1);
-  }
-
-  .experience-year {
-    font-size: var(--fs-h2);
-  }
-
-  .experience-role {
-    font-size: var(--fs-h2);
-  }
-
-  .experience-description {
-    font-size: var(--fs-small);
-  }
-
-  .ex-technology-tag {
-    font-size: var(--fs-xs);
-  }
-}
-
-@media (max-width: 450px) {
-  .experience-container {
-    padding: 40px 16px;
-    height: auto;
-  }
-
+@media (max-width: 700px) {
   .experience-item {
-    padding: 18px 16px;
-  }
-
-  .experience-title h1 {
-    font-size: var(--fs-h1);
-  }
-
-  .experience-year {
-    font-size: var(--fs-small);
-  }
-
-  .experience-role {
-    font-size: var(--fs-h2);
-  }
-
-  .experience-description {
-    font-size: var(--fs-small);
-  }
-
-  .ex-technology-tag {
-    font-size: var(--fs-xs);
-    padding: 0.25rem 0.6rem;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }

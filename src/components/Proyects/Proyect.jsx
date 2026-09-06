@@ -1,91 +1,73 @@
-import { useState, useEffect } from "react";
-import projects_data from "../../data/projects";
-import github from "../../assets/socialmedia/git2.png";
-import "./Proyect.css";
-import logo_path from "../../assets/dragon.svg";
+import { useState, useEffect } from "react"
+import projects_data from "../../data/projects"
+import { FaGithub } from "react-icons/fa"
+import "./Proyect.css"
 
 const Proyect = () => {
   return (
-    <div id="project" className="proyects-container">
-      <div className="proyects-title">
-        <h1>Projects</h1>
-        <img src={logo_path} alt="Logo" />
+    <section id="project" className="proyects section">
+      <div className="section-head">
+        <span className="section-kicker">03</span>
+        <h2 className="section-title">Projects</h2>
       </div>
-
       <div className="proyects-grid">
         {projects_data.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
 const ProjectCard = ({ project }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
     if (project.img && project.img.length > 1) {
       const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % project.img.length);
-      }, 3000); // Cambia la imagen cada 3 segundos
-      return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+        setCurrentImageIndex((prev) => (prev + 1) % project.img.length)
+      }, 3000)
+      return () => clearInterval(interval)
     }
-  }, [project.img]);
+  }, [project.img])
 
   return (
-    <div className="proyect-card">
-      <div className="proyect-titlecard">
-        <h1>{project.title}</h1>
-      </div>
+    <article className="proyect-card glass-card">
       <div className="proyect-image-container">
         {project.img && project.img.length > 0 ? (
           <img
             src={project.img[currentImageIndex]}
-            alt={`Project ${project.title} - Image ${currentImageIndex + 1}`}
+            alt={`${project.title} screenshot`}
             className="proyect-image"
           />
         ) : (
-          <p>No images available</p>
+          <p className="proyect-no-img">No images</p>
         )}
       </div>
       <div className="proyect-content">
-        <h1>Description:</h1>
+        <h3 className="proyect-name">{project.title}</h3>
         <p className="proyect-description">{project.description}</p>
-        <h1>Participation:</h1>
-        <p className="proyect-participation">{project.participation}</p>
-        <h1>Technologies:</h1>
+        <p className="proyect-participation">
+          <span className="mono label">Role</span> {project.participation}
+        </p>
         <div className="proyect-technologies">
           {project.technologies.map((tech, idx) => (
-            <span key={idx} className="pro-technology-tag">
-              {tech}
-            </span>
+            <span key={idx} className="tech-tag mono">{tech}</span>
           ))}
         </div>
         <div className="proyect-links">
-          <div className="links-title">
-          <h1>Code:</h1>
-
-          </div>
-          
           {project.url ? (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-icon"
-            >
-              <img src={github} alt="GitHub Link" />
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="github-link" title="View code">
+              <FaGithub size={16} />
+              <span>Code</span>
             </a>
           ) : (
-            <h3 className="no-url-message">
-              Due to institutional security policies, no further information can be provided.
-            </h3>
+            <p className="no-url-message">Private / institutional — source unavailable.</p>
           )}
         </div>
       </div>
-    </div>
-  );
-};
+    </article>
+  )
+}
 
-export default Proyect;
+export default Proyect

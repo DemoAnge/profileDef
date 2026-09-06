@@ -1,267 +1,90 @@
-﻿.skills {
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.skill-icon-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 40px;
-  margin: 0 auto;
-  max-width: 1400px;
-  min-height: auto;
-  box-sizing: border-box;
+  gap: 10px;
+  padding: 18px 12px;
+  min-height: 96px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-title {
-  position: relative;
-  text-align: center;
-}
-
-.skill-title h1 {
-  font-size: var(--fs-h1);
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: var(--tracking-tight);
-}
-
-.skill-title img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 100px;
-}
-
-.skill-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.skill-right {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-  gap: 20px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-  padding: 24px 28px;
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-right::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-brand);
-  opacity: 0.85;
-}
-
-.skill-left {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 48%;
-}
-
-.right-title {
-  text-align: center;
-}
-
-.right-title h1 {
-  font-size: var(--fs-h2);
-  margin: 0;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.skill {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.skill:hover {
-  transform: translateX(4px);
-}
-
-.skill p {
-  font-size: var(--fs-small);
-  font-weight: 500;
-  color: var(--text);
-  min-width: 70px;
-}
-
-.skill hr {
-  outline: none;
-  border: none;
-  width: 30%;
-  height: 6px;
-  border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, var(--accent), var(--primary));
-}
-
-.skill span {
-  font-size: var(--fs-xs);
-  font-weight: 400;
-  margin-top: 2px;
-  color: var(--muted);
-}
-
-.skill-achievements {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.skill-achievement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.3s ease;
-}
-
-.skill-achievement:hover {
-  transform: translateY(-2px);
-}
-
-.skill-achievement h1 {
-  font-size: clamp(1.5rem, 2vw, 1.85rem);
-  font-weight: 700;
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.skill-achievement p {
-  font-size: var(--fs-small);
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.card-certificate {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-card);
-  cursor: pointer;
-  background: var(--surface);
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.card-certificate::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-brand);
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.card-certificate:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow), var(--shadow-card);
+.skill-icon-card:hover {
+  transform: translateY(-3px);
   border-color: var(--border-strong);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
 }
 
-.card-certificate img {
+.skill-icon { filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.2)); }
+
+.skill-icon-label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.certs-title {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cert-card {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.cert-card img {
   width: 100%;
-  height: 185px;
+  height: 140px;
   object-fit: cover;
   display: block;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
 
-.card-certificate span {
+.cert-card span {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(59, 130, 246, 0.72);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--fs-small);
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  inset: 0;
+  display: grid;
+  place-items: center;
   text-align: center;
-  padding: 12px;
-  z-index: 1;
+  padding: 10px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: #fff;
+  background: rgba(3, 7, 18, 0.72);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.card-certificate:hover span {
-  opacity: 1;
+.cert-card:hover img { opacity: 0.35; }
+.cert-card:hover span { opacity: 1; }
+
+@media (max-width: 900px) {
+  .skills-icons { grid-template-columns: repeat(3, 1fr); }
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 1024px) {
-  .skills {
-    padding: 48px 24px;
-  }
-
-  .skill {
-    margin: 8px 0;
-  }
-
-  .skill-left {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-  }
-
-  .skill-right {
-    width: 100%;
-  }
-
-  .skill-section {
-    flex-direction: column;
-    gap: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .skill-left {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-title h1 {
-    font-size: var(--fs-h1);
-  }
-
-  .skill-achievements {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 495px) {
-  .skills {
-    padding: 40px 16px;
-  }
-
-  .skill p {
-    font-size: var(--fs-small);
-  }
-
-  .skill-achievement h1 {
-    font-size: clamp(1.4rem, 5vw, 1.7rem);
-  }
+@media (max-width: 520px) {
+  .skills-icons { grid-template-columns: repeat(2, 1fr); }
+  .certs-grid { grid-template-columns: 1fr; }
+  .cert-card img { height: 160px; }
 }

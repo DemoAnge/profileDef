@@ -1,8 +1,6 @@
-﻿import { useRef, useMemo } from "react"
+import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
-
-/** Standalone HeroScene (torusKnot + particles + orbitals) from b7efda3 — kept for reuse; App mounts ThreeBackground. */
 
 function TorusKnot() {
   const mesh = useRef()
@@ -18,9 +16,9 @@ function TorusKnot() {
     <mesh ref={mesh}>
       <torusKnotGeometry args={[1.1, 0.35, 100, 16]} />
       <meshStandardMaterial
-        color="#4f6bff"
-        emissive="#3d57e8"
-        emissiveIntensity={0.22}
+        color="#00D9FF"
+        emissive="#3B82F6"
+        emissiveIntensity={0.3}
         roughness={0.3}
         metalness={0.8}
       />
@@ -35,8 +33,8 @@ function Particles() {
   const [positions, colors] = useMemo(() => {
     const pos = new Float32Array(count * 3)
     const col = new Float32Array(count * 3)
-    const colorA = new THREE.Color("#4f6bff")
-    const colorB = new THREE.Color("#7b8cff")
+    const colorA = new THREE.Color("#00D9FF")
+    const colorB = new THREE.Color("#3B82F6")
     for (let i = 0; i < count; i++) {
       const r = 2 + Math.random() * 3
       const theta = Math.random() * Math.PI * 2
@@ -64,7 +62,7 @@ function Particles() {
         <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
         <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
       </bufferGeometry>
-      <pointsMaterial size={0.06} vertexColors transparent opacity={0.55} sizeAttenuation depthWrite={false} />
+      <pointsMaterial size={0.06} vertexColors transparent opacity={0.8} sizeAttenuation depthWrite={false} />
     </points>
   )
 }
@@ -92,7 +90,7 @@ function Orbitals() {
       {positions.map((p, i) => (
         <mesh key={i} position={[p.x, 0, p.z]}>
           <sphereGeometry args={[0.05, 8, 8]} />
-          <meshBasicMaterial color="#7b8cff" />
+          <meshBasicMaterial color="#3B82F6" />
         </mesh>
       ))}
     </group>
@@ -102,9 +100,9 @@ function Orbitals() {
 export default function HeroScene() {
   return (
     <Canvas camera={{ position: [0, 0, 3.5], fov: 50 }} dpr={[1, 1.5]}>
-      <ambientLight intensity={0.55} />
-      <directionalLight position={[3, 3, 3]} intensity={0.7} />
-      <directionalLight position={[-3, -3, -3]} intensity={0.15} color="#4f6bff" />
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[3, 3, 3]} intensity={0.8} />
+      <directionalLight position={[-3, -3, -3]} intensity={0.2} color="#8B5CF6" />
       <Particles />
       <TorusKnot />
       <Orbitals />

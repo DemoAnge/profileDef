@@ -1,196 +1,205 @@
-body {
-    padding-top: 100px; /* Compensa la altura del navbar */
-}
-
-/* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; 
-    background: #161513;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 calc(5vw); /* Padding dinámico basado en el ancho de la pantalla */
-    height: 10vh; /* Altura relativa al alto de la pantalla */
-    box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 64px;
+  background: rgba(7, 11, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(5vw);
+  box-sizing: border-box;
 }
 
-/* Logo */
 .logo {
-    width: calc(15vw); /* Dinámico en función del ancho de la pantalla */
-    max-width: 180px; /* Limita el tamaño máximo */
-    height: auto;
+  width: auto;
+  max-width: 140px;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
 }
 
-/* Menú de navegación */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 2vw; /* Espaciado dinámico */
-    font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: var(--fs-small);
 }
 
-/* Elementos del menú */
 .nav-menu li {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
 }
 
 .nav-menu li img {
-    width: calc(8vw); /* Dinámico */
-    height: 40px;
-    margin: auto;
+  width: calc(8vw);
+  height: 40px;
+  margin: auto;
 }
 
-/* Enlaces del menú */
 .anchor-link {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.anchor-link:hover {
+  color: var(--accent);
+}
 
-
-/* Botón de conexión */
 .nav-connect {
-    padding: 0.3em 0.5em;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #8e2de2 0.36%, #00c6ff 102.06%);
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: 0.5s;
-    margin-left: 1.5vw;
+  padding: 0.45em 1.1em;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-cta);
+  color: #fff;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin-left: 1.5vw;
+  border: none;
 }
 
 .nav-connect:hover {
-    transform: scale(1.05);
-}
-.nav-mob-close{
-    display: none;
-}
-.nav-mob-open{
-    display: none;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
 }
 
+.nav-mob-close {
+  display: none;
+}
+
+.nav-mob-open {
+  display: none;
+}
 
 @media (min-width: 851px) and (max-width: 1250px) {
-    .navbar {
-        padding: 0 calc(4vw);
-    }
+  .navbar {
+    padding: 0 calc(4vw);
+  }
 
-    .logo {
-        width: 150px;
-    }
+  .logo {
+    max-width: 120px;
+  }
 
-    .nav-menu {
-        flex-direction: row;
-        gap: 2vw;
-    }
+  .nav-menu {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
 
-    .nav-connect {
-        display: none; /* Ocultar botón conectar */
-    }
+  .nav-connect {
+    display: none;
+  }
 }
 
-/* Diseño móvil desde 850px hasta 244px */
 @media (max-width: 850px) {
-    .navbar {
-        padding: 0 calc(3vw);
-    }
+  .navbar {
+    padding: 0 calc(3vw);
+    height: 64px;
+  }
 
-    .logo {
-        width: 250px;
-        
-    }
+  .logo {
+    max-width: 130px;
+    max-height: 36px;
+  }
 
-    .nav-menu {
-        position: fixed;
-        flex-direction: column;
-        align-items: flex-start;
-        top: 0;
-        right: -100%;
-        gap: 2vh;
-        background-color: rgba(50, 50, 53, 0.85);
-        width: 30vw; /* Ancho dinámico del menú */
-        height: 100%;
-        z-index: 2;
-        transition: right 0.5s;
-        overflow-y: auto;
-    }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: -100%;
+    gap: 1.5rem;
+    background-color: rgba(7, 11, 20, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid var(--border);
+    width: min(280px, 70vw);
+    height: 100%;
+    z-index: 2;
+    transition: right 0.35s ease;
+    overflow-y: auto;
+    padding-top: 1rem;
+  }
 
-    .nav-menu.open {
-        
-        right: 0;
-        
-    }
+  .nav-menu.open {
+    right: 0;
+  }
 
-    .nav-menu li {
-        padding-left: calc(2vw);
-        flex-direction: row;
-        gap: 1vw;
-        margin-top: 2vh;
-    }
+  .nav-menu li {
+    padding-left: 1.25rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
 
-    .nav-menu li img {
-        width: calc(10vw);
-    }
+  .nav-menu li img {
+    width: 28px;
+    height: auto;
+  }
 
-    .nav-menu li a {
-        font-size: 0.9rem;
-        margin-top: 15px;
-    }
+  .nav-menu li a {
+    font-size: var(--fs-small);
+    margin-top: 0;
+  }
 
-    .nav-connect {
-        display: none;
-    }
+  .nav-connect {
+    display: none;
+  }
 
-    .nav-mob-open {
-        display: block;
-        position: fixed;
-        right: calc(4vw);
-        top: calc(2vh);
-        width: 6vw;
-        height: 10vw;
-        cursor: pointer;
-        z-index: 1001;
-    }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: calc(4vw);
+    top: 18px;
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-    .nav-mob-close {
-        display: block;
-        position: relative;
-        top: calc(6vh);
-        left: calc(2vw);
-        margin-bottom: calc(1vh);
-        width: calc(6vw);
-        cursor: pointer;
-    }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 1.5rem;
+    left: 1.25rem;
+    margin-bottom: 1rem;
+    width: 24px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 0 calc(2vw);
-        height: 8vh;
-    }
+  .navbar {
+    padding: 0 calc(3vw);
+    height: 60px;
+  }
 
-    .logo {
-        width: 250px;
-        height: 80px;
-    }
+  .logo {
+    max-width: 120px;
+    max-height: 34px;
+    width: auto;
+    height: auto;
+  }
 
-    .nav-menu {
-        width: calc(50vw);
-        height: 100vh; /* Menú más pequeño en pantallas pequeñas */
-    }
+  .nav-menu {
+    width: min(260px, 75vw);
+    height: 100vh;
+  }
 
-    .nav-menu li a {
-        margin-top: 15px;
-        font-size: 0.8rem;
-    }
+  .nav-menu li a {
+    margin-top: 0;
+    font-size: var(--fs-small);
+  }
 }

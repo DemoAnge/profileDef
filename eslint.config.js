@@ -33,6 +33,22 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off',
+      'react/no-unknown-property': [
+        'error',
+        {
+          ignore: [
+            'attach', 'args', 'count', 'array', 'itemSize',
+            'position', 'intensity', 'transparent', 'opacity',
+            'wireframe', 'sizeAttenuation', 'blending',
+            'distort', 'speed', 'metalness', 'roughness',
+            'emissive', 'emissiveIntensity',
+            'side', 'depthWrite', 'vertexColors',
+            'rotation', 'ref', 'radius', 'geometry',
+            'luminanceThreshold', 'luminanceSmoothing', 'mipmapBlur',
+          ],
+        },
+      ],
     },
   },
 ]

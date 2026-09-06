@@ -2,13 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Para respetar el espacio del navbar */
+  justify-content: flex-start;
   gap: 40px;
-  margin: 30px;
-  padding: 80px 20px; /* Ajusta el padding superior para compensar el navbar */
-  height: calc(100vh - 80px); /* Ajusta la altura para restar el tamaño del navbar */
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: auto;
+  height: auto;
   box-sizing: border-box;
-  max-width: 1800px;
+  max-width: 1100px;
+  width: 100%;
 }
 
 .experience-title {
@@ -16,8 +18,10 @@
 }
 
 .experience-title h1 {
-  font-size: 2.5rem;
-  padding: 0px 0px;
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  padding: 0;
 }
 
 .experience-title img {
@@ -31,117 +35,142 @@
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .experience-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: 24px 28px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.experience-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
 }
 
 .experience-year {
-  color: #8633cf;
-  font-size: 2rem;
+  color: var(--accent);
+  font-size: var(--fs-h2);
   font-weight: 600;
+  letter-spacing: var(--tracking-tight);
 }
 
 .experience-details {
-  border-left: 4px solid #8633cf;
-  padding-left: 1.8rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  width: 100%;
 }
 
 .experience-role {
-  font-size: 35px; /* Tamaño original */
+  font-size: var(--fs-h2);
   font-weight: 700;
-  background: linear-gradient(270deg, #8e2de2 50.41%, #00c6ff 90.25%);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
 }
 
 .experience-description {
-  gap: 30px;
-  color: #e2e8f0;
-  margin-top: 20px;
-  font-size: 16px;
+  gap: 16px;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
 }
 
 .experience-technologies {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
 }
 
 .ex-technology-tag {
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
   font-weight: 500;
-  border: 1px solid #fff;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
 }
 
 .ex-technology-tag:hover {
-  transform: scale(1.12);
-  transition: 0.5s;
-  border-color: #b940f1;
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
   .experience-container {
-    padding: 60px 20px; /* Ajusta el padding superior para pantallas más pequeñas */
-    height: calc(100vh - 60px);
+    padding: 48px 24px;
+    height: auto;
+    min-height: auto;
   }
 
   .experience-title h1 {
-    font-size: 2rem; /* Ajusta el tamaño de letra en pantallas más pequeñas */
+    font-size: var(--fs-h1);
   }
 
   .experience-year {
-    font-size: 1.8rem; /* Ajuste menor */
+    font-size: var(--fs-h2);
   }
 
   .experience-role {
-    font-size: 28px; /* Reducido proporcionalmente */
+    font-size: var(--fs-h2);
   }
 
   .experience-description {
-    font-size: 14px; /* Ajustado para mejor visibilidad */
+    font-size: var(--fs-small);
   }
 
   .ex-technology-tag {
-    font-size: 0.7rem;
+    font-size: var(--fs-xs);
   }
 }
 
 @media (max-width: 450px) {
   .experience-container {
-    padding: 50px 15px; /* Ajusta el espacio para dispositivos muy pequeños */
-    height: calc(100vh - 50px);
+    padding: 40px 16px;
+    height: auto;
+  }
+
+  .experience-item {
+    padding: 18px 16px;
   }
 
   .experience-title h1 {
-    font-size: 1.8rem; /* Títulos más pequeños */
+    font-size: var(--fs-h1);
   }
 
   .experience-year {
-    font-size: 1.2rem; /* Tamaño reducido */
+    font-size: var(--fs-small);
   }
 
   .experience-role {
-    font-size: 20px; /* Más pequeño para pantallas menores */
+    font-size: var(--fs-h2);
   }
 
   .experience-description {
-    font-size: 12px; /* Texto más pequeño para adaptarse */
+    font-size: var(--fs-small);
   }
 
   .ex-technology-tag {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.6rem;
+    font-size: var(--fs-xs);
+    padding: 0.25rem 0.6rem;
   }
 }

@@ -3,8 +3,8 @@
   <defs>
     <!-- Define un gradiente lineal -->
     <linearGradient id="gradient" x1="25%" y1="50%" x2="40%" y2="0%">
-      <stop offset="0%" style="stop-color:#8e2de2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00c6ff;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
     </linearGradient>
 
     <!-- Opcional: elimina la clase para evitar conflictos -->

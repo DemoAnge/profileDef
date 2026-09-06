@@ -1,5 +1,5 @@
 import "./navbar.css";
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import underline from "../../assets/underpng.webp";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -19,10 +19,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Asegurar que siempre vuelve a "home" en un reload.
     setMenu("home");
-    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
+
+    const sections = document.querySelectorAll("section[id], div[id]")
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setMenu(entry.target.id)
+        }
+      }
+    }, { rootMargin: "-40% 0px -55% 0px" })
+
+    sections.forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <div className="navbar">

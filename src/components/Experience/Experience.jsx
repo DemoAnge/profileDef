@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Experience.css"
 import experience_data from '../../data/experience_data'
 import logo_path from "../../assets/dragon.svg"

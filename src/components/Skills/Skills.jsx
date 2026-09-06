@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Skills.css"
 import logo_path from "../../assets/dragon.svg"
 import cert1 from "../../assets/certificate/auditor.png"
@@ -21,18 +20,32 @@ const Skills = () => {
             <h1>Technologies</h1>
           </div>
           
-          <div className="skill"> <p>Angular </p> <hr style={{width:"50%"}} />
-          <span className="skill-level">Advanced</span></div>
-          <div className="skill"> <p>Node </p><hr style={{width:"50%"}} />
-          <span className="skill-level">Intermedio</span></div>
-          <div className="skill"> <p>Recat JS </p> <hr style={{width:"50%"}} /> 
+          <div className="skill"> <p>React</p> <hr style={{width:"50%"}} />
           <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>Angular</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>Node.js</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>Django / DRF</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>Tailwind</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>TypeScript</p> <hr style={{width:"35%"}} />
+          <span className="skill-level">Basic</span></div>
           <div className="skill"> <p>Python</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>.NET / C#</p> <hr style={{width:"35%"}} />
+          <span className="skill-level">Basic</span></div>
+          <div className="skill"> <p>MySQL</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
+          <div className="skill"> <p>SQL Server</p> <hr style={{width:"35%"}} />
           <span className="skill-level">Basic</span></div>
           <div className="skill"> <p>Oracle</p> <hr style={{width:"50%"}} />
           <span className="skill-level">Intermediate</span></div>
-          <div className="skill"> <p>Linux</p> <hr style={{width:"50%"}} />
+          <div className="skill"> <p>Docker</p> <hr style={{width:"35%"}} />
           <span className="skill-level">Basic</span></div>
+          <div className="skill"> <p>Git</p> <hr style={{width:"50%"}} />
+          <span className="skill-level">Intermediate</span></div>
                     
 
         </div>
@@ -68,12 +81,12 @@ const Skills = () => {
       <div className="skill-archievements">
             <div className="skill-archievement">
                 <h1>6+</h1>
-                <p>Curses</p>
+                <p>Courses</p>
             </div>
             <hr />
             <div className="skill-archievement">
-                <h1>7+</h1>
-                <p>Certficates</p>
+                <h1>6</h1>
+                <p>Certificates</p>
             </div>
             
            

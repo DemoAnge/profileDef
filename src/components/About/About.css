@@ -1,211 +1,231 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-   margin: 0 40px;
-   padding: 30px;
-    min-height: calc(100vh - 80px); /* Asegura la vista completa restando el navbar */
-    box-sizing: border-box;
-    max-width: 1800px; /* Limitar el ancho máximo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: calc(100vh - 72px);
+  box-sizing: border-box;
+  max-width: 1400px;
 }
 
 .about-title {
-    position: relative;
+  position: relative;
+  color: transparent;
 }
 
 .about-title h1 {
-    padding: 0px 20px;
-    font-size: 2.5rem;
-    font-weight: 600;
+  padding: 0 20px;
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
 }
 
 .about-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100px;
 }
 
 .about-section {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 40px;
-    justify-content: space-between; /* Distribuye el espacio */
-    align-items: center; /* Centra verticalmente los elementos */
-    margin: 20px;
-}
-.about-left{
-    width:100% ; /* Tamaño fijo para la imagen */
-    height: calc(100% + 10rem);
-    max-width: 350px;
-    border-radius: 20%; /* Hace la imagen circular */
-    background: linear-gradient(270deg, #8e2de2, #ffffff);
-    background-size: 400% 400%; /* Suaviza el gradiente animado */
-    animation: border-spin 4s linear infinite; /* Anima el fondo */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centra la imagen dentro del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar */
-    position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
 }
 
+.about-left {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-card);
+  background: var(--gradient-brand);
+  background-size: 200% 200%;
+  animation: border-spin 6s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  padding: 3px;
+}
 
 .about-left img {
-    width: 95%;
-    max-width: 350px; /* Tamaño relativo para ajustarse dentro del div */
-    height: auto;
-    
-    border-radius: 20%; /* Mantiene la imagen circular */
-    display: block;
-    background: linear-gradient(270deg, #8e2de2 10%, #00c6ff 100%);
-
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: calc(var(--radius-card) - 2px);
+  display: block;
+  background: var(--surface);
 }
 
 .about-right {
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: center; /* Centra verticalmente el texto */
-    flex: 1; /* Usa el espacio disponible */
-    margin: 20px; /* Espaciado general */
-    text-align: left; /* Alinea a la izquierda */
-    gap: 20px; /* Espaciado entre textos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 0;
+  text-align: left;
+  gap: 20px;
 }
 
 .about-para {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: var(--lh-body);
+  margin: 0;
 }
 
 .about-skills {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.about-skills h2{
-    font-size: 35px;
-    background: linear-gradient(264deg, #8e2de2 80.41%, #00c6ff 30.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.about-skills h2 {
+  font-size: var(--fs-h2);
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: var(--tracking-tight);
 }
 
 .about-skill {
-    
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    transition: 0.3s;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .about-skill p {
-    min-width: 10px;
-    font-size: 16px;
-    font-weight: 500;
+  min-width: 80px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text);
 }
 
 .about-skill hr {
-    outline: none;
-    border: none;
-    width: 30%;
-    height: 8px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #8e2de2 -5.09%, #00c6ff 106.28%);
+  outline: none;
+  border: none;
+  width: 30%;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--accent), var(--primary));
 }
 
 .about-skills span {
-    font-size: 0.5rem; /* Tamaño pequeño */
-    font-weight: 400;
-    margin-top: 2px;
-    position: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  margin-top: 2px;
+  color: var(--muted);
 }
 
-.about-archievements {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 80px;
+.about-achievements {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  gap: 16px;
 }
 
-.about-archievement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: 0.5s;
+.about-achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
 }
 
-.about-archievement h1 {
-    font-size: 35px;
-    font-weight: 700;
-    background: linear-gradient(270deg, #8e2de2 50.41%, #00c6ff 90.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.about-achievement h1 {
+  font-size: clamp(1.5rem, 2vw, 1.85rem);
+  font-weight: 700;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.about-archievement p {
-    font-size: 16px;
-    font-weight: 500;
+.about-achievement p {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 
 .about-skill:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+  transform: translateX(4px);
 }
 
-.about-archievement:hover {
-    transform: scale(1.12);
-    transition: 0.5s;
+.about-achievement:hover {
+  transform: translateY(-2px);
 }
 
 @media (max-width: 850px) {
-    .about-section {
-        flex-direction: column; /* Apila los elementos */
-        text-align: center; /* Centra el texto */
-        gap: 20px;
-    }
+  .about {
+    padding: 48px 24px;
+  }
 
-    .about-left img {
-        width: 200px; /* Reduce el tamaño en pantallas pequeñas */
-    }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
 
-    .about-right {
-        text-align: center; /* Centra el contenido */
-    }
-    .about-title h1 {
-        font-size: 1.8rem;
-    }
+  .about-left {
+    max-width: 240px;
+  }
+
+  .about-left img {
+    max-width: 240px;
+  }
+
+  .about-right {
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-para {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-title h1 {
+    font-size: var(--fs-h1);
+  }
 }
 
 @media (max-width: 450px) {
-    .about {
-        margin: 20px; /* Ajuste adicional para pantallas muy pequeñas */
-        padding-top: 80px; /* Mantiene el espacio del navbar */
-    }
-    .about-title h1 {
-        font-size: 1.8rem; /* Ajustar el tamaño del título */
-    }
+  .about {
+    margin: 0;
+    padding: 40px 16px;
+  }
+
+  .about-title h1 {
+    font-size: var(--fs-h1);
+  }
 }
+
 @keyframes border-spin {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import projects_data from "../../data/projects";
 import github from "../../assets/socialmedia/git2.png";
 import "./Proyect.css";

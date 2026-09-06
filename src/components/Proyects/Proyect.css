@@ -4,10 +4,11 @@
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
-  margin: 20px;
-  padding: 80px 20px 20px; /* Espacio superior para respetar el navbar */
-  min-height: calc(100vh - 80px); /* Altura mínima restando el navbar */
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: auto;
   box-sizing: border-box;
+  max-width: 1400px;
 }
 
 .proyects-title {
@@ -16,7 +17,9 @@
 }
 
 .proyects-title h1 {
-  font-size: 2.5rem;
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
 }
 
 .proyects-title img {
@@ -28,32 +31,46 @@
 }
 
 .proyects-grid {
-  
-  
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
-  gap: 2rem; /* Espaciado entre los elementos */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
   width: 100%;
   max-width: 1200px;
-  justify-content: center; /* Centrar las columnas si hay menos de 2 */
+  justify-content: center;
 }
 
 .proyect-card {
-  background: linear-gradient(267deg, #8e2de2 0.36%, #00c6ff 102.06%);
-  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  
-  transition: transform 0.3s ease;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
-  
+  gap: 16px;
+  padding: 20px 16px 24px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyect-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+  opacity: 0.9;
 }
 
 .proyect-card:hover {
   cursor: pointer;
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
 }
 
 .proyect-image-container {
@@ -61,55 +78,60 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 200px;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .proyect-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
-  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+  transition: opacity 0.35s ease;
 }
 
 .proyect-title {
-
   bottom: 0;
-  width: 90%;
+  width: 100%;
   text-align: center;
-  padding: 0.2rem 0.5;
+  padding: 0.2rem 0.5rem;
 }
 
 .proyect-titlecard {
-  font-size: 0.8rem;
-  margin: 0 20px;
+  font-size: var(--fs-small);
+  margin: 0 12px;
+  color: var(--text);
 }
 
 .proyect-content {
   padding: 0.5rem;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+  width: 100%;
 }
 
 .proyect-content h1 {
-  font-size: 0.9rem;
-  font-weight: bold;
-  background: #000000;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--text);
+  background: none;
+  -webkit-text-fill-color: var(--text);
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  letter-spacing: var(--tracking-tight);
 }
 
 .proyect-description,
 .proyect-participation {
-  font-size: 0.7rem;
-  color: #ffffff;
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: var(--lh-body);
+  text-align: center;
 }
 
 .proyect-technologies {
@@ -120,12 +142,20 @@
 }
 
 .pro-technology-tag {
-  color: #FFF;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
   font-weight: 500;
-  border: 1px solid #FFF;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.25s ease;
+}
+
+.pro-technology-tag:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .proyect-links {
@@ -135,80 +165,73 @@
   align-items: center;
   margin-top: auto;
 }
-.proyect-links h3{
-  font-size: 0.7rem;
+
+.proyect-links h3 {
+  font-size: var(--fs-xs);
+  color: var(--muted);
 }
 
-
 .github-icon {
-  margin-top: 15px;
-  font-size: 1.5rem;
-  color: #ffffff;
-  transition: color 0.3s;
+  margin-top: 12px;
+  font-size: 1.35rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .github-icon:hover {
-  transform: scale(1.2);
-  color: #b940f1;
+  transform: translateY(-2px);
+  color: var(--accent);
 }
 
-.pro-technology-tag:hover {
-  transform: scale(1.12);
-  transition: 0.5s;
-  border-color: #b940f1;
-}
-
-/* Responsividad */
 @media (max-width: 850px) {
   .proyects-container {
-    padding: 80px 20px 20px; /* Asegurar espacio para el navbar */
-  }
-  .proyects-title h1 {
-    font-size: 2rem;
-  }
-  .proyect-titlecard {
-    font-size: 0.8rem;
-  }
-  .proyects-grid {
-    grid-template-columns: 1fr; /* Una columna */
+    padding: 48px 24px;
   }
 
-  .proyect-card {
-    align-items: center;
+  .proyects-title h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .proyect-titlecard {
+    font-size: var(--fs-small);
+  }
+
+  .proyects-grid {
+    grid-template-columns: 1fr;
   }
 
   .proyect-image {
-    height: 250px; /* Mantener dimensiones de la imagen */
+    height: 220px;
     margin: 0 auto;
   }
 
   .proyect-content h1 {
-    font-size: 0.85rem; /* Reducir el título */
+    font-size: var(--fs-h2);
   }
 
   .proyect-description,
   .proyect-participation {
-    font-size: 0.65rem; /* Reducir descripción */
+    font-size: var(--fs-small);
   }
 }
 
 @media (max-width: 495px) {
   .proyects-container {
-    padding: 80px 15px 20px; /* Asegurar espacio para el navbar */
+    padding: 40px 16px;
   }
 
   .proyect-content h1 {
-    font-size: 0.75rem; /* Título más pequeño */
+    font-size: var(--fs-h2);
   }
 
   .proyect-description,
   .proyect-participation {
-    font-size: 0.6rem; /* Texto más pequeño */
+    font-size: var(--fs-xs);
   }
 
   .pro-technology-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
+    font-size: var(--fs-xs);
+    padding: 0.25rem 0.6rem;
   }
 
   .github-icon {
@@ -216,6 +239,6 @@
   }
 
   .proyect-image {
-    width: 90%;
+    width: 100%;
   }
 }

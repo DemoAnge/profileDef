@@ -7,29 +7,37 @@ import mprocess from "../assets/imgproyects/doc.jpeg"
 
 const projects_data =[
     {
-    title: "CNN Clothing Color Recognition",
-    description: "Developmen a convolutional neural network to train it for recognizing individuals and the main clothing items they were wearing, identifying the colors of both upper and lower garments. Libraries that facilitated the project's development were utilized. This program includes an interface for real-time clothing color detection using the device’s camera.",
-    participation: "Building the convolutional neural network using the YOLO library, training and testing the model and developing the interface to use the system.",
-    technologies: ["Python"],
-    img: [network, network2],
-    url:"https://github.com/DemoAnge/redCnnIA"
+    title: "RAEE / WEEE Traceability Research Platform (2024–2025)",
+    description: "Modular research architecture for electronic-waste (RAEE) traceability across five phases. Evaluated IoT data capture and ledger-style integrity as design options. Work supported a peer-reviewed publication with DOI.",
+    participation: "Architecture, research implementation, and technical writing for the paper.",
+    technologies: ["Python", "Modular Architecture", "IoT (evaluation)"],
+    img: [network2],
+    url:""
     },
     {
-    title: "InvControl (Inventory Management",
-    description: "Developmen an inventory management system to control non-current assets of the Faculty of Systems, Electronics, and Industrial Engineering at the Technical University of Ambato. This project included registration of categories, locations, and assets, asset deletion and control and detailed report generation.",
-    participation: "I served as the project manager and was responsible for FrontEnd development of the modules.",
-    technologies: ["Angular","Tailwind","Python","MySQL"],
+    title: "InvControl — Faculty Inventory (2024)",
+    description: "Inventory management for non-current assets at UTA FISEI: categories, locations, assets, deletion/control flows, and reports. Replaced spreadsheet workflows with a web app backed by a REST API.",
+    participation: "Led the full development lifecycle and coordinated delivery — React/Tailwind UI, Django/MySQL REST API, and handover docs.",
+    technologies: ["React", "Tailwind", "Django", "MySQL", "REST API"],
     img: [inv1,inv2,inv3],
     url:"https://github.com/Invcontrol-Back/dasfrontend"
     },
     {
-        title: "Document Process Map",
-        description: "Development support of a web application for the company “Mushuc Runa Ltda.” to control document management and access restrictions in the different departments.",
-        participation: "I contributed to the FrontEnd development of some application modules.",
-        technologies: ["Angular" ],
+        title: "Document Process Map — Mushuc Runa (2024)",
+        description: "Web modules for document management and department access restrictions at Cooperativa Mushuc Runa Ltda.",
+        participation: "Front-end modules in Angular; production fixes as junior contributor.",
+        technologies: ["Angular", "Oracle"],
         img: [mprocess],
         url:""
         },
+    {
+    title: "CNN Clothing Color Recognition",
+    description: "Convolutional model with a camera UI for garment color detection. YOLO-assisted pipeline built in Python for training, testing, and real-time camera inference.",
+    participation: "Model training/testing and camera interface.",
+    technologies: ["Python", "YOLO"],
+    img: [network, network2],
+    url:"https://github.com/DemoAnge/redCnnIA"
+    },
         
 ];
 export default projects_data

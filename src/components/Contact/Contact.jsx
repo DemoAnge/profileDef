@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from "react"
 import "./Contact.css"
 import logo_pat from "../../assets/dragon.svg"
 import loc from "../../assets/location.svg"
@@ -6,7 +6,7 @@ import loc from "../../assets/location.svg"
 
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");  
+  const [result, setResult] = useState("");  
 
   const onSubmit = async (event) => {  
     event.preventDefault();  
@@ -62,8 +62,8 @@ const Contact = () => {
 
         <div className="contact-section">
           <div className="contact-left">
-            <h1>Let's talk</h1>
-            <p>I'm currently available to take on new projects, so feel free to message me about anything you'd like me to work on. You can contact me anytime.</p>
+            <h1>Let&apos;s talk</h1>
+            <p>I&apos;m currently available to take on new projects, so feel free to message me about anything you&apos;d like me to work on. You can contact me anytime.</p>
             <div className="contact-details">
               <div className="contact-detail">
                 <img src={loc} alt="" /><p>Ambato, Ecuador</p>
@@ -76,9 +76,10 @@ const Contact = () => {
                 <label htmlFor="">Your Name:</label>
                 <input type="text" placeholder='Enter your name' name='name' required/>
                 <label htmlFor="">Your Email:</label>
-                <input type="email"  pattern=".+@example\.com" size="30" required placeholder='Enter your Email' name='email'/>
-                <label htmlFor="">Write you message here</label>
-                <textarea name="message" id="" rows={10} placeholder='Enter your message' requiredFields ></textarea>
+                <input type="email" size="30" required placeholder='Enter your Email' name='email'/>
+                <label htmlFor="">Write your message here</label>
+                <textarea name="message" id="" rows={10} placeholder='Enter your message' required></textarea>
+                {result && <p className="contact-result">{result}</p>}
                 <button type='submit' className='contact-submit'>Send Message</button>
 
 

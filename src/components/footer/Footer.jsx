@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Footer.css"
 import logo from "../../assets/logo.png"
 
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="footer-top">
             <div className="footer-top-left">
                 <img src={logo} alt="" />
-                <p>Specializing in the creation of dynamic interfaces and robust backend systems.</p>
+                <p>Full-stack web apps with React, Angular, Node.js, and Django.</p>
             </div>
             <div className="footer-top-right">
 
@@ -17,15 +16,14 @@ const Footer = () => {
         </div>
         <hr />
         <div className="footer-bottom">
-            <p className="footer-botom-left"> <span>©2025 Angel.</span>    All rights reserved</p>
+            <p className="footer-bottom-left"> <span>©2026 Angel.</span>    All rights reserved</p>
             <div className="footer-bottom-right">
-                <p>Term of Services</p>
+                <p>Terms of Service</p>
                 <p>Privacy Policy</p>
                 <p>Connect with me</p>
             </div>
 
         </div>
-
     </div>
   )
 }

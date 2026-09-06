@@ -1,18 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
+:root {
+  --primary: #3B82F6;
+  --accent: #22D3EE;
+  --accent-deep: #06B6D4;
+  --violet: #7C3AED;
+  --bg: #070B14;
+  --bg-mid: #0B1220;
+  --surface: #111827;
+  --surface-elevated: #1A2332;
+  --text: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --muted: #64748B;
+  --border: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(34, 211, 238, 0.28);
+  --gradient-brand: linear-gradient(135deg, #22D3EE 0%, #3B82F6 55%, #7C3AED 100%);
+  --gradient-cta: linear-gradient(135deg, #2563EB, #06B6D4);
+  --gradient-text: linear-gradient(135deg, #22D3EE, #3B82F6);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+  --shadow-glow: 0 0 24px rgba(34, 211, 238, 0.18);
+  --radius-card: 16px;
+  --radius-pill: 999px;
 
+  --fs-hero: clamp(2rem, 3.6vw, 2.65rem);
+  --fs-h1: clamp(1.45rem, 2.2vw, 1.85rem);
+  --fs-h2: clamp(1.1rem, 1.5vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+  --lh-tight: 1.2;
+  --lh-body: 1.65;
+  --tracking-tight: -0.02em;
 }
-html,body{
-    
-    background: #161513;
-    color: white;
-    font-family: "Roboto Slab";
-    font-size: 1.5rem;
-    width: 100%;
-    height: 100vh;
 
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  min-height: 100vh;
+  line-height: var(--lh-body);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
+    var(--bg);
+  padding-top: 72px;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent), var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent-deep), var(--violet));
+}
+
+.about-title h1,
+.skill-title h1,
+.proyects-title h1,
+.experience-title h1,
+.contact-title h1 {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Inter", sans-serif;
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+}
+
+code, .tech-text {
+  font-family: "JetBrains Mono", monospace;
 }

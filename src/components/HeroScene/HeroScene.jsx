@@ -2,27 +2,36 @@ import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 
-function TorusKnot() {
-  const mesh = useRef()
+// Spinning dodecahedron (polyhedron). Alternative: octahedronGeometry args={[1.2, 0]}.
+function Dodecahedron() {
+  const group = useRef()
+  const geometry = useMemo(() => new THREE.DodecahedronGeometry(1.2, 0), [])
+  const edges = useMemo(() => new THREE.EdgesGeometry(geometry), [geometry])
 
   useFrame((state) => {
-    if (!mesh.current) return
-    mesh.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.1
-    mesh.current.rotation.y += 0.005
-    mesh.current.position.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.15
+    if (!group.current) return
+    group.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.1
+    group.current.rotation.y += 0.005
+    group.current.position.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.15
   })
 
   return (
-    <mesh ref={mesh}>
-      <torusKnotGeometry args={[1.1, 0.35, 100, 16]} />
-      <meshStandardMaterial
-        color="#00D9FF"
-        emissive="#3B82F6"
-        emissiveIntensity={0.3}
-        roughness={0.3}
-        metalness={0.8}
-      />
-    </mesh>
+    <group ref={group}>
+      <mesh geometry={geometry}>
+        <meshStandardMaterial
+          color="#00D9FF"
+          emissive="#3B82F6"
+          emissiveIntensity={0.3}
+          roughness={0.3}
+          metalness={0.8}
+          transparent
+          opacity={0.88}
+        />
+      </mesh>
+      <lineSegments geometry={edges}>
+        <lineBasicMaterial color="#00D9FF" transparent opacity={0.35} />
+      </lineSegments>
+    </group>
   )
 }
 
@@ -104,7 +113,7 @@ export default function HeroScene() {
       <directionalLight position={[3, 3, 3]} intensity={0.8} />
       <directionalLight position={[-3, -3, -3]} intensity={0.2} color="#8B5CF6" />
       <Particles />
-      <TorusKnot />
+      <Dodecahedron />
       <Orbitals />
     </Canvas>
   )

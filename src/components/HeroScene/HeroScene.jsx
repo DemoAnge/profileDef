@@ -2,7 +2,7 @@ import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 
-// Spinning dodecahedron (polyhedron). Alternative: octahedronGeometry args={[1.2, 0]}.
+// Spinning dodecahedron wireframe (lines only). Alternative: octahedronGeometry args={[1.2, 0]}.
 function Dodecahedron() {
   const group = useRef()
   const geometry = useMemo(() => new THREE.DodecahedronGeometry(1.2, 0), [])
@@ -17,19 +17,9 @@ function Dodecahedron() {
 
   return (
     <group ref={group}>
-      <mesh geometry={geometry}>
-        <meshStandardMaterial
-          color="#00D9FF"
-          emissive="#3B82F6"
-          emissiveIntensity={0.3}
-          roughness={0.3}
-          metalness={0.8}
-          transparent
-          opacity={0.88}
-        />
-      </mesh>
+      {/* WebGL often ignores linewidth; EdgesGeometry gives clear wireframe edges */}
       <lineSegments geometry={edges}>
-        <lineBasicMaterial color="#00D9FF" transparent opacity={0.35} />
+        <lineBasicMaterial color="#00D9FF" transparent opacity={0.9} linewidth={2} />
       </lineSegments>
     </group>
   )

@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
-  margin-bottom: 48px;
 }
 
 .skill-icon-card {
@@ -29,62 +28,10 @@
   letter-spacing: 0.02em;
 }
 
-.certs-title {
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.certs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.cert-card {
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-}
-
-.cert-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
-}
-
-.cert-card span {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 10px;
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  color: #fff;
-  background: rgba(10, 10, 10, 0.78);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.cert-card:hover img { opacity: 0.35; }
-.cert-card:hover span { opacity: 1; }
-
 @media (max-width: 900px) {
   .skills-icons { grid-template-columns: repeat(3, 1fr); }
-  .certs-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 520px) {
   .skills-icons { grid-template-columns: repeat(2, 1fr); }
-  .certs-grid { grid-template-columns: 1fr; }
-  .cert-card img { height: 160px; }
 }

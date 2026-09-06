@@ -97,7 +97,7 @@ const Contact = () => {
               title="GitHub"
               aria-label="GitHub"
             >
-              <FaGithub size={18} />
+              <FaGithub size={16} />
               <span>GitHub</span>
             </a>
             <a
@@ -107,7 +107,7 @@ const Contact = () => {
               title="LinkedIn"
               aria-label="LinkedIn"
             >
-              <FaLinkedinIn size={18} />
+              <FaLinkedinIn size={16} />
               <span>LinkedIn</span>
             </a>
           </div>
@@ -143,7 +143,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              rows={6}
+              rows={4}
               placeholder="How can I help?"
               required
               disabled={status === "sending"}
@@ -174,3 +174,4 @@ const Contact = () => {
 }
 
 export default Contact
+

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg: #0a0a0a;
@@ -54,7 +54,7 @@ body {
   overflow-x: hidden;
 }
 
-.app-shell { position: relative; min-height: 100vh; background: var(--bg); }
+.app-shell { position: relative; min-height: 100vh; background: transparent; }
 .app-content { position: relative; z-index: 1; }
 
 ::selection {
@@ -132,3 +132,4 @@ body {
 @media (max-width: 768px) {
   .section { padding: 64px 16px; }
 }
+

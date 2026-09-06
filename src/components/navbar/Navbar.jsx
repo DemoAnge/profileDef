@@ -6,10 +6,11 @@ import { HiBars3, HiXMark } from "react-icons/hi2"
 const links = [
   { id: "home", label: "Home", offset: 0 },
   { id: "about", label: "About", offset: 50 },
-  { id: "services", label: "Services", offset: 50 },
   { id: "project", label: "Portfolio", offset: 50 },
-  { id: "extras", label: "Extras", offset: 50 },
   { id: "experience", label: "Experience", offset: 50 },
+  { id: "skill", label: "Skills", offset: 50 },
+  { id: "services", label: "Capabilities", offset: 50 },
+  { id: "extras", label: "Extras", offset: 50 },
   { id: "contact", label: "Contact", offset: 50 },
 ]
 

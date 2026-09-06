@@ -16,7 +16,14 @@ const Experience = () => {
             <div className="experience-marker" aria-hidden />
             <div className="experience-year">{exp.year}</div>
             <div className="experience-details card">
-              <h3 className="experience-role">{exp.title}</h3>
+              <div className="experience-heading">
+                <h3 className="experience-role">{exp.title}</h3>
+                {exp.track && (
+                  <span className={`experience-badge track-${exp.track.toLowerCase()}`}>
+                    {exp.track}
+                  </span>
+                )}
+              </div>
               <p className="experience-description">{exp.description}</p>
               <div className="experience-technologies">
                 {exp.technologies.map((tech, idx) => (

@@ -1,11 +1,11 @@
 import Navbar from './components/navbar/Navbar'
 import HeroMe from './components/HeroMe/HeroMe'
 import About from './components/About/About'
-import Services from './components/Services/Services'
-import Skills from './components/Skills/Skills'
 import Proyect from './components/Proyects/Proyect'
-import Extras from './components/Extras/Extras'
 import Experience from './components/Experience/Experience'
+import Skills from './components/Skills/Skills'
+import Services from './components/Services/Services'
+import Extras from './components/Extras/Extras'
 import Contact from './components/Contact/Contact'
 import Footer from './components/footer/Footer'
 
@@ -16,11 +16,11 @@ const App = () => {
         <Navbar />
         <HeroMe />
         <About />
-        <Services />
-        <Skills />
         <Proyect />
-        <Extras />
         <Experience />
+        <Skills />
+        <Services />
+        <Extras />
         <Contact />
         <Footer />
       </div>

@@ -105,3 +105,19 @@
 @media (max-width: 800px) {
   .contact-section { grid-template-columns: 1fr; }
 }
+
+.contact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contact-chip {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}

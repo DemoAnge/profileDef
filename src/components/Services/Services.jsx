@@ -1,20 +1,20 @@
 import "./Services.css"
 import { HiOutlineCodeBracket, HiOutlineServerStack, HiOutlineCircleStack } from "react-icons/hi2"
 
-const services = [
+const capabilities = [
   {
     title: "Front-end",
-    text: "Responsive UIs with React and Angular — clean components, accessible layouts, and polished user flows for web apps.",
+    text: "I bring React and Angular UI work to a team — clear components, accessible layouts, and features that are ready for review and handover.",
     Icon: HiOutlineCodeBracket,
   },
   {
     title: "Back-end",
-    text: "APIs and business logic with Node.js and Django — authentication, validation, and reliable server-side workflows.",
+    text: "I contribute Node.js and Django API work — authentication, validation, and reliable server-side logic that supports product and internal tools.",
     Icon: HiOutlineServerStack,
   },
   {
     title: "APIs & databases",
-    text: "REST integrations and relational data with MySQL and Oracle — models, queries, and end-to-end feature delivery.",
+    text: "I connect REST APIs to relational data (MySQL, Oracle) — models, queries, and end-to-end delivery from UI through data layer.",
     Icon: HiOutlineCircleStack,
   },
 ]
@@ -23,17 +23,17 @@ const Services = () => {
   return (
     <section id="services" className="services section">
       <div className="section-head center">
-        <span className="section-kicker">Services</span>
+        <span className="section-kicker">Capabilities</span>
         <h2 className="section-title">
-          What I <span className="accent">build for you</span>
+          How I <span className="accent">work</span>
         </h2>
         <p className="section-sub">
-          Full-stack delivery from UI to API and data — focused on reliable web apps for product and internal tools.
+          What I bring to an engineering team — full-stack delivery from UI to API and data, with honest scope.
         </p>
       </div>
 
       <div className="services-grid">
-        {services.map(({ title, text, Icon }) => (
+        {capabilities.map(({ title, text, Icon }) => (
           <article key={title} className="service-card card">
             <div className="service-icon-wrap" aria-hidden>
               <div className="service-diamond">
@@ -42,9 +42,6 @@ const Services = () => {
             </div>
             <h3 className="service-title">{title}</h3>
             <p className="service-text">{text}</p>
-            <a href="#contact" className="service-link">
-              Discuss <span aria-hidden>→</span>
-            </a>
           </article>
         ))}
       </div>

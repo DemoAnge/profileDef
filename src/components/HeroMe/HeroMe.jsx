@@ -7,14 +7,9 @@ const HeroMe = () => {
     <section id="home" className="hero section">
       <div className="hero-grid">
         <div className="hero-copy">
-          <span className="hero-kicker">Full-Stack Software Engineer</span>
-          <h1 className="hero-name">
-            This is your engineer,{" "}
-            <span className="hero-accent">Angel Pilamunga</span>
-          </h1>
+          <h1 className="hero-name">Angel Pilamunga</h1>
           <p className="hero-lead">
-            Junior / Semi-Senior based in Ambato, Ecuador. Building reliable web apps end to end —
-            UI, API, and data — open to remote or local roles.
+            Full-Stack Software Engineer (Junior/Semi-Senior) · Ambato · Open to remote/local
           </p>
           <div className="hero-actions">
             <a href="#contact" className="btn-primary">Get in touch</a>

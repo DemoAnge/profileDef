@@ -25,7 +25,7 @@ const About = () => {
               Day-to-day work covers React and Angular front ends, Node.js and Django REST APIs, and relational databases (MySQL, Oracle). Ships features end to end: UI, API, data model, and handover docs. Also held an IT support and security operations role at a cooperative — operations work, not full-stack development.
             </p>
             <p>
-              Recent work includes the FISEI faculty inventory system that replaced spreadsheet workflows, Angular document-management modules at Mushuc Runa, and a modular WEEE (RAEE) traceability research architecture that supported a peer-reviewed paper with a DOI. TypeScript and Docker appear in Skills at a Basic level; .NET/C# and SQL Server at Basic/Familiar.
+              Recent work includes the FISEI faculty inventory system that replaced spreadsheet workflows, Angular document-management modules at Mushuc Runa, and a modular WEEE (RAEE) traceability research architecture that supported a peer-reviewed paper. TypeScript, Docker, and .NET/C# (with SQL Server) are familiar at a basic level — not areas I claim as expert.
             </p>
           </div>
           <div className="about-meta">

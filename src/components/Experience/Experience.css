@@ -83,3 +83,41 @@
   }
   .experience-year { padding-top: 0; }
 }
+
+.experience-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.experience-heading .experience-role {
+  margin-bottom: 0;
+  flex: 1 1 200px;
+}
+
+.experience-badge {
+  flex-shrink: 0;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.experience-badge.track-ops {
+  color: #e8b84a;
+  border-color: rgba(232, 184, 74, 0.35);
+  background: rgba(232, 184, 74, 0.1);
+}
+
+.experience-badge.track-engineering {
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+}

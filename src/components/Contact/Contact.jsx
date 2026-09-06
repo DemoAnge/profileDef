@@ -56,8 +56,11 @@ const Contact = () => {
         <div className="contact-left card">
           <h3>Get in touch</h3>
           <p>
-            I&apos;m currently available to take on new projects, so feel free to message me about anything you&apos;d like me to work on. You can contact me anytime.
+            Open to conversations about Junior or Semi-Senior full-stack roles — remote or local. Feel free to reach out anytime.
           </p>
+          <div className="contact-chips">
+            <span className="contact-chip">Open to Junior / Semi-Senior full-stack roles</span>
+          </div>
           <div className="contact-detail">
             <HiOutlineMapPin size={16} aria-hidden />
             <span>Ambato, Ecuador</span>

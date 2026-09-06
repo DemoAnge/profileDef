@@ -24,6 +24,8 @@ const Proyect = () => {
   )
 }
 
+const hasRepoUrl = (url) => typeof url === "string" && url.trim().length > 0
+
 const ProjectCard = ({ project }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -61,13 +63,13 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <div className="proyect-links">
-          {project.url ? (
+          {hasRepoUrl(project.url) ? (
             <a href={project.url} target="_blank" rel="noopener noreferrer" className="github-link" title="View code">
               <FaGithub size={16} />
               <span>Code</span>
             </a>
           ) : (
-            <p className="no-url-message">Private / institutional — source unavailable.</p>
+            <p className="no-url-message">Private / institutional</p>
           )}
         </div>
       </div>

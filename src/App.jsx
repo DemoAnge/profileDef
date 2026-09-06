@@ -8,27 +8,21 @@ import Services from './components/Services/Services'
 import Extras from './components/Extras/Extras'
 import Contact from './components/Contact/Contact'
 import Footer from './components/footer/Footer'
-import HeroScene from './components/HeroScene/HeroScene'
 
 const App = () => {
   return (
-    <div className="app-shell">
-      <div className="hero-scene-bg" aria-hidden="true">
-        <HeroScene />
-      </div>
-      <div className="app-content">
-        <Navbar />
-        <HeroMe />
-        <About />
-        <Proyect />
-        <Experience />
-        <Skills />
-        <Services />
-        <Extras />
-        <Contact />
-        <Footer />
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <HeroMe />
+      <About />
+      <Proyect />
+      <Experience />
+      <Skills />
+      <Services />
+      <Extras />
+      <Contact />
+      <Footer />
+    </>
   )
 }
 

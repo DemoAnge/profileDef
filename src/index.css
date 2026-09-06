@@ -54,23 +54,6 @@ body {
   overflow-x: hidden;
 }
 
-.app-shell { position: relative; min-height: 100vh; background: transparent; }
-.app-content { position: relative; z-index: 1; }
-
-.hero-scene-bg {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hero-scene-bg canvas {
-  pointer-events: none !important;
-}
-
 ::selection {
   background: rgba(79, 107, 255, 0.35);
   color: #fff;

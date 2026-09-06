@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react"
+﻿import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 import { EffectComposer, Bloom } from "@react-three/postprocessing"
@@ -10,9 +10,9 @@ const SPLINE_POINTS = 40
 function neuralColor(t) {
   const c = new THREE.Color()
   if (t < 0.5) {
-    c.lerpColors(new THREE.Color("#00D9FF"), new THREE.Color("#3B82F6"), t * 2)
+    c.lerpColors(new THREE.Color("#22D3EE"), new THREE.Color("#3B82F6"), t * 2)
   } else {
-    c.lerpColors(new THREE.Color("#3B82F6"), new THREE.Color("#8B5CF6"), (t - 0.5) * 2)
+    c.lerpColors(new THREE.Color("#3B82F6"), new THREE.Color("#7C3AED"), (t - 0.5) * 2)
   }
   return c
 }
@@ -165,17 +165,17 @@ function CentralPolygon() {
     <group>
       <group ref={groupRef}>
         <lineSegments geometry={edges}>
-          <lineBasicMaterial color="#00D9FF" transparent opacity={0.5} />
+          <lineBasicMaterial color="#22D3EE" transparent opacity={0.5} />
         </lineSegments>
         <lineSegments geometry={edges} scale={1.06}>
-          <lineBasicMaterial color="#8B5CF6" transparent opacity={0.2} />
+          <lineBasicMaterial color="#7C3AED" transparent opacity={0.2} />
         </lineSegments>
       </group>
       <points ref={ringRef}>
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" count={ringCount} array={ringPos} itemSize={3} />
         </bufferGeometry>
-        <pointsMaterial size={0.025} color="#00D9FF" transparent opacity={0.5} sizeAttenuation />
+        <pointsMaterial size={0.025} color="#22D3EE" transparent opacity={0.5} sizeAttenuation />
       </points>
     </group>
   )

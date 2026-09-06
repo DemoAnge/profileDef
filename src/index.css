@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   --primary: #3B82F6;
@@ -22,6 +22,15 @@
   --shadow-glow: 0 0 24px rgba(34, 211, 238, 0.18);
   --radius-card: 16px;
   --radius-pill: 999px;
+
+  /* Cyber DNA tokens */
+  --glow-cyan: rgba(34, 211, 238, 0.35);
+  --glow-cyan-soft: rgba(34, 211, 238, 0.12);
+  --scanline: rgba(34, 211, 238, 0.04);
+  --grid-opacity: 0.045;
+  --glass-bg: rgba(7, 11, 20, 0.72);
+  --glass-blur: 18px;
+  --glass-border: rgba(34, 211, 238, 0.22);
 
   --fs-hero: clamp(2rem, 3.6vw, 2.65rem);
   --fs-h1: clamp(1.45rem, 2.2vw, 1.85rem);
@@ -62,6 +71,24 @@ body {
     radial-gradient(ellipse at 50% 80%, rgba(124, 58, 237, 0.04) 0%, transparent 50%),
     var(--bg);
   padding-top: 72px;
+  position: relative;
+}
+
+/* Subtle global scanlines — cyber texture, very low opacity */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.5;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--scanline) 2px,
+    var(--scanline) 3px
+  );
 }
 
 ::selection {
@@ -104,4 +131,17 @@ body {
 
 code, .tech-text {
   font-family: "JetBrains Mono", monospace;
+}
+
+/* Shared cyber card accent line helper */
+.cyber-card-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  opacity: 0.85;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
 }

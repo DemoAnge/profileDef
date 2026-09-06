@@ -1,4 +1,4 @@
-.about {
+﻿.about {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card), 0 0 28px rgba(34, 211, 238, 0.12);
   position: relative;
   padding: 3px;
 }
@@ -74,6 +74,24 @@
   margin: 0;
   text-align: left;
   gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  opacity: 0.85;
 }
 
 .about-para {
@@ -195,6 +213,7 @@
   .about-right {
     text-align: center;
     align-items: center;
+    padding: 24px 20px;
   }
 
   .about-para {

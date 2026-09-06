@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react"
+﻿import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 
@@ -16,7 +16,7 @@ function TorusKnot() {
     <mesh ref={mesh}>
       <torusKnotGeometry args={[1.1, 0.35, 100, 16]} />
       <meshStandardMaterial
-        color="#00D9FF"
+        color="#22D3EE"
         emissive="#3B82F6"
         emissiveIntensity={0.3}
         roughness={0.3}
@@ -33,7 +33,7 @@ function Particles() {
   const [positions, colors] = useMemo(() => {
     const pos = new Float32Array(count * 3)
     const col = new Float32Array(count * 3)
-    const colorA = new THREE.Color("#00D9FF")
+    const colorA = new THREE.Color("#22D3EE")
     const colorB = new THREE.Color("#3B82F6")
     for (let i = 0; i < count; i++) {
       const r = 2 + Math.random() * 3
@@ -102,7 +102,7 @@ export default function HeroScene() {
     <Canvas camera={{ position: [0, 0, 3.5], fov: 50 }} dpr={[1, 1.5]}>
       <ambientLight intensity={0.6} />
       <directionalLight position={[3, 3, 3]} intensity={0.8} />
-      <directionalLight position={[-3, -3, -3]} intensity={0.2} color="#8B5CF6" />
+      <directionalLight position={[-3, -3, -3]} intensity={0.2} color="#7C3AED" />
       <Particles />
       <TorusKnot />
       <Orbitals />

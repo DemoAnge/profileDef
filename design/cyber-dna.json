@@ -1,0 +1,384 @@
+﻿{
+  "meta": {
+    "name": "cyber",
+    "description": "Cyber / neural portfolio look extracted from current profileDef: dark navy surfaces, cyan-blue-violet brand gradients, glass navigation, compact Inter typography, JetBrains Mono tech tags, and a Three.js/R3F neural particle field with bloom.",
+    "source_references": [
+      "src/index.css",
+      "src/App.jsx",
+      "src/components/ThreeBackground/ThreeBackground.jsx",
+      "src/components/HeroScene/HeroScene.jsx",
+      "src/components/navbar/navbar.css",
+      "src/components/HeroMe/heroMe.css",
+      "src/components/About/About.css",
+      "src/components/Skills/Skills.css",
+      "src/components/Proyects/Proyect.css",
+      "src/components/Experience/Experience.css",
+      "src/components/Contact/Contact.css",
+      "src/components/footer/Footer.css"
+    ],
+    "created_at": "2026-09-06"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "analogous",
+      "primary": {
+        "hex": "#3B82F6",
+        "role": "Primary brand blue for CTAs, links, and neural mid-tones"
+      },
+      "secondary": {
+        "hex": "#7C3AED",
+        "role": "Violet secondary for gradient terminals, depth accents, and bloom highlights"
+      },
+      "accent": {
+        "hex": "#22D3EE",
+        "role": "Cyan accent for borders, focus rings, hover glow, and neural particle highlights"
+      },
+      "neutral": {
+        "scale": [
+          "#F1F5F9",
+          "#94A3B8",
+          "#64748B",
+          "#1A2332",
+          "#111827",
+          "#0B1220",
+          "#070B14",
+          "#050816"
+        ],
+        "usage": "Lightest (#F1F5F9) is primary text; mid slate (#94A3B8/#64748B) for secondary/muted; dark navy stack for surfaces and canvas background (#050816)"
+      },
+      "semantic": {
+        "success": "#22C55E",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      },
+      "surface": {
+        "background": "#070B14",
+        "card": "#111827",
+        "elevated": "#1A2332"
+      },
+      "contrast_strategy": "high contrast light text on deep navy with layered cyan/blue/violet glow accents; secondary copy uses slate mid-tones"
+    },
+    "typography": {
+      "type_scale": {
+        "display": {
+          "size": "clamp(2rem, 3.6vw, 2.65rem)",
+          "weight": "800",
+          "line_height": "1.2",
+          "tracking": "-0.02em"
+        },
+        "heading_1": {
+          "size": "clamp(1.45rem, 2.2vw, 1.85rem)",
+          "weight": "700",
+          "line_height": "1.2",
+          "tracking": "-0.02em"
+        },
+        "heading_2": {
+          "size": "clamp(1.1rem, 1.5vw, 1.3rem)",
+          "weight": "600",
+          "line_height": "1.3",
+          "tracking": "-0.02em"
+        },
+        "heading_3": {
+          "size": "1rem",
+          "weight": "600",
+          "line_height": "1.4",
+          "tracking": "0"
+        },
+        "body": {
+          "size": "1rem",
+          "weight": "400",
+          "line_height": "1.65",
+          "tracking": "0"
+        },
+        "body_small": {
+          "size": "0.875rem",
+          "weight": "400",
+          "line_height": "1.65",
+          "tracking": "0"
+        },
+        "caption": {
+          "size": "0.75rem",
+          "weight": "500",
+          "line_height": "1.4",
+          "tracking": "0.02em"
+        },
+        "overline": {
+          "size": "0.75rem",
+          "weight": "500",
+          "line_height": "1.4",
+          "tracking": "0.12em"
+        }
+      },
+      "font_families": {
+        "heading": "Inter, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "font_style_notes": "Compact geometric sans (Inter) for UI/headings; JetBrains Mono reserved for tech tags and code; root 16px with clamped hero ~2–2.65rem — never giant body scale"
+    },
+    "spacing": {
+      "base_unit": "8px",
+      "scale": ["4px", "8px", "12px", "16px", "20px", "24px", "28px", "32px", "40px", "48px", "60px", "80px"],
+      "content_density": "comfortable",
+      "section_rhythm": "Sections use ~60px vertical padding (48px tablet / 40px mobile) with 40px internal gaps; hero fills viewport minus 72px nav offset"
+    },
+    "layout": {
+      "grid_system": "CSS flex + CSS grid hybrid; projects 2-col / skills certs 3-col collapsing to 1",
+      "max_content_width": "1400px",
+      "columns": "2–3 content columns with single-column mobile stack",
+      "gutter": "1.75rem projects; 20–32px skills/about",
+      "breakpoints": {
+        "sm": "450px",
+        "md": "768px",
+        "lg": "850px",
+        "xl": "1024px",
+        "xxl": "1200px"
+      },
+      "alignment_tendency": "centered sections with left-aligned text on desktop hero/about; mobile centers"
+    },
+    "shape": {
+      "border_radius": {
+        "small": "10px",
+        "medium": "12px",
+        "large": "16px",
+        "pill": "999px"
+      },
+      "border_usage": "subtle 1px slate borders with cyan-strong (#22D3EE @ 28%) on hover/focus; hairline cyan on glass nav",
+      "divider_style": "1px rgba(148,163,184,0.14) hairlines; accent 3px left border on experience details; gradient top inset on cards"
+    },
+    "elevation": {
+      "shadow_style": "soft diffused with cyan glow accents",
+      "levels": {
+        "low": "0 2px 8px rgba(0, 0, 0, 0.25)",
+        "medium": "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(148, 163, 184, 0.14)",
+        "high": "0 0 24px rgba(34, 211, 238, 0.18), 0 8px 32px rgba(0, 0, 0, 0.4)"
+      },
+      "depth_cues": "layered navy surfaces + glass blur + cyan glow shadows + R3F bloom"
+    },
+    "iconography": {
+      "style": "flat SVG social/menu icons with muted-to-full opacity hover",
+      "stroke_weight": "1.5–2px equivalent",
+      "size_scale": ["16px", "22px", "24px", "28px"],
+      "preferred_set": "custom SVG assets (social, menu, location) plus Font Awesome GitHub glyph on project cards"
+    },
+    "motion": {
+      "easing": "ease / ease-in-out",
+      "duration_scale": {
+        "micro": "0.25s",
+        "normal": "0.3s",
+        "macro": "4s"
+      },
+      "entrance_pattern": "subtle translateY/X on hover rather than entrance choreography; floating tech tags use infinite ease-in-out float",
+      "exit_pattern": "instant / reverse hover transitions",
+      "philosophy": "minimal functional micro-motion with ambient neural field motion behind content"
+    },
+    "components": {
+      "button_style": "Pill CTAs with cyan→blue gradient fill, white label, soft cyan glow + translateY(-2px) on hover; secondary ghost pills with slate border turning cyan",
+      "input_style": "Elevated surface (#1A2332), 10px radius, slate border; focus cyan border + 3px rgba(34,211,238,0.12) ring",
+      "card_style": "Surface #111827, 16px radius, shadow-card, 1px border; optional 3px brand-gradient top inset; hover lift -4px + border-strong + glow",
+      "navigation_pattern": "Fixed glass top bar (64px) with blur, logo left, links center-right, gradient Connect pill; mobile slide-in drawer",
+      "modal_style": "none present — overlays use certificate hover wash instead",
+      "list_style": "Vertical stacked experience cards with accent left rail; skill bars as gradient pills",
+      "component_notes": "Tech tags use mono font + elevated surface; certificate cards use primary-blue hover overlay; about photo framed by animated brand-gradient border"
+    }
+  },
+  "design_style": {
+    "aesthetic": {
+      "mood": ["cybernetic", "focused", "nocturnal", "technical", "confident"],
+      "visual_metaphor": "Neural network / cyber command deck floating over deep space navy",
+      "era_influence": "2020s neo-cyber UI with restrained neon (not 80s synthwave kitsch)",
+      "genre": "developer portfolio / cyber-tech personal brand",
+      "personality_traits": ["precise", "modern", "engineering-minded", "approachable-pro"],
+      "adjectives": ["glowing", "glassy", "compact", "neural", "cool-toned"]
+    },
+    "visual_language": {
+      "complexity": "moderate",
+      "ornamentation": "subtle accents",
+      "whitespace_usage": "comfortable breathing room with dense card content",
+      "visual_weight_distribution": "heavy ambient 3D field behind lighter glass/card UI chrome",
+      "focal_strategy": "single hero portrait + gradient name, then section title gradients guide scroll",
+      "contrast_level": "high text-on-bg; medium accent glow",
+      "texture_usage": "soft radial color washes + optional low-opacity scanline/grid CSS texture; R3F particles for generative texture"
+    },
+    "composition": {
+      "hierarchy_method": "typographic hierarchy + gradient color weight on titles/CTAs",
+      "balance_type": "asymmetric hero (photo left / copy right) with centered section shells",
+      "flow_direction": "top-to-bottom scroll with left-to-right hero reading path",
+      "grouping_strategy": "cards and pill tags cluster related tech/projects; experience items as stacked modules",
+      "negative_space_role": "dark navy negative space frames glowing UI; radial washes prevent flat voids"
+    },
+    "imagery": {
+      "photo_treatment": "circular portrait with brand-gradient ring pulse; about photo in animated gradient frame",
+      "illustration_style": "abstract 3D neural geometry (icosahedron edges, splines, torus knot in HeroScene)",
+      "graphic_elements": "gradient text fills, pill badges, skill bars, card top accent lines, floating tech labels",
+      "pattern_usage": "subtle CSS scanline/grid under hero; radial multi-stop body washes",
+      "image_shape": "circle for hero portrait; rounded 12–16px for project/certificate imagery"
+    },
+    "interaction_feel": {
+      "feedback_style": "glow + border color shift + small lift",
+      "hover_behavior": "translateY(-2/-4px), border-strong cyan, shadow-glow, accent text color",
+      "transition_personality": "smooth glide 0.25–0.3s ease",
+      "loading_style": "instant paint with ambient R3F scene already looping",
+      "microinteraction_density": "moderate — hover lifts on cards/tags/CTAs, floating tags, ring pulse"
+    },
+    "brand_voice_in_ui": {
+      "tone": "professional-technical with friendly first-person hero copy",
+      "formality": "semi-formal",
+      "cta_style": "direct imperative (Get in touch / View projects / Connect)",
+      "empty_state_approach": "not applicable — static portfolio content",
+      "error_tone": "calm corrective (form validation would use semantic error red if added)"
+    }
+  },
+  "visual_effects": {
+    "overview": {
+      "effect_intensity": "moderate",
+      "performance_tier": "heavy",
+      "fallback_strategy": "reduce to CSS radial gradients and glass if WebGL unavailable; keep static surfaces",
+      "primary_technology": "WebGL/Three.js (React Three Fiber + postprocessing Bloom)"
+    },
+    "background_effects": {
+      "type": "generative-art",
+      "description": "Fixed full-viewport neural field: additive particles, Catmull-Rom splines with traveling dots, rotating icosahedron wireframe, soft ambient glow sphere, dark #050816 clear color",
+      "technology": "React Three Fiber + Three.js + EffectComposer Bloom",
+      "params": {
+        "color_palette": ["#22D3EE", "#3B82F6", "#7C3AED"],
+        "speed": "slow ambient (particles ~0.015 rad/s yaw; spline travelers 0.08–0.14)",
+        "density": "800 particles + 12 splines + 80 ring points",
+        "opacity": "particles 0.6; splines 0.2; ambient glow 0.04",
+        "blend_mode": "additive (THREE.AdditiveBlending on particles/glow)"
+      }
+    },
+    "particle_systems": {
+      "enabled": true,
+      "type": "connected-nodes",
+      "description": "Spherical shell of 800 additive points colored along cyan→blue→violet lerp; slow rotation; paired with spline curves acting as neural pathways",
+      "technology": "R3F points + pointsMaterial vertexColors",
+      "params": {
+        "count": "800",
+        "shape": "point sprites (size 0.04, sizeAttenuation)",
+        "size_range": "0.025–0.04",
+        "movement_pattern": "rigid group rotation + subtle pitch sine; spline dots travel along curves",
+        "color_behavior": "static per-particle lerp from #22D3EE / #3B82F6 / #7C3AED",
+        "interaction": "none",
+        "spawn_area": "spherical shell radius ~3.5–8.5, vertically squashed"
+      }
+    },
+    "3d_elements": {
+      "enabled": true,
+      "type": "scene-bg",
+      "description": "Background neural scene with central icosahedron edges + optional HeroScene torus knot (if mounted); fixed Canvas pointer-events none",
+      "technology": "React Three Fiber / Three.js",
+      "params": {
+        "renderer": "WebGLRenderer via R3F Canvas, dpr [1,1.5], antialias, alpha false",
+        "lighting": "unlit meshBasic/lineBasic in ThreeBackground; HeroScene uses ambient + dual directional with violet fill",
+        "camera": "perspective fov 50, position [0, 0.3, 7]",
+        "materials": "additive pointsMaterial, lineBasicMaterial, meshBasicMaterial ambient glow",
+        "geometry": "buffer particles, CatmullRomCurve3 lines, Icosahedron EdgesGeometry, sphere glow",
+        "post_processing": ["bloom"],
+        "interaction_model": "none (decorative, pointer-events: none)"
+      }
+    },
+    "shader_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "No custom GLSL; bloom is postprocessing pass only",
+      "technology": "none",
+      "params": {
+        "uniforms": "n/a",
+        "vertex_manipulation": "none",
+        "fragment_output": "none",
+        "noise_type": "none",
+        "distortion": "none"
+      }
+    },
+    "scroll_effects": {
+      "parallax": {
+        "enabled": false,
+        "layers": "0",
+        "depth_range": "n/a",
+        "speed_curve": "n/a"
+      },
+      "scroll_triggered_animations": {
+        "enabled": false,
+        "trigger_points": "none",
+        "animation_type": "none",
+        "scrub_behavior": "none"
+      },
+      "scroll_morphing": {
+        "enabled": false,
+        "description": "No scroll morphing present"
+      }
+    },
+    "text_effects": {
+      "type": "gradient-fill",
+      "description": "Section titles and hero name use CSS background-clip text with cyan→blue (and full brand) gradients",
+      "technology": "CSS background-clip / -webkit-text-fill-color",
+      "params": {
+        "split_strategy": "none",
+        "animation_per_unit": "none",
+        "stagger": "none",
+        "effect_style": "static gradient fill on headings"
+      }
+    },
+    "cursor_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "No custom cursor, trail, or spotlight",
+      "params": {
+        "shape": "n/a",
+        "size": "n/a",
+        "blend_mode": "n/a",
+        "trail": "false",
+        "interaction_zone": "n/a"
+      }
+    },
+    "image_effects": {
+      "type": "none",
+      "description": "Standard cover images with opacity transition; certificate blue wash overlay on hover — no distortion shaders",
+      "technology": "CSS opacity / background overlay",
+      "params": {
+        "filter_pipeline": "none",
+        "hover_transform": "card translateY(-4px); image opacity ease",
+        "reveal_animation": "certificate label fade-in overlay",
+        "distortion_type": "none"
+      }
+    },
+    "glassmorphism_neumorphism": {
+      "enabled": true,
+      "style": "glass",
+      "params": {
+        "blur_radius": "12–20px (nav 16–20px intensified; floating tags 8px)",
+        "transparency": "rgba(7,11,20,0.72–0.85) nav; rgba(17,24,39,0.75) tech floats",
+        "border_treatment": "1px cyan hairline / slate border",
+        "shadow_type": "soft drop + cyan glow on CTA hover",
+        "light_source_angle": "top-down implied by border-bottom hairline"
+      }
+    },
+    "canvas_drawings": {
+      "enabled": false,
+      "type": "none",
+      "description": "No Canvas 2D drawings; WebGL only via R3F",
+      "technology": "none",
+      "params": {
+        "draw_method": "n/a",
+        "animation_loop": "n/a",
+        "color_scheme": "n/a",
+        "responsiveness": "n/a",
+        "interaction": "n/a"
+      }
+    },
+    "svg_animations": {
+      "enabled": false,
+      "type": "none",
+      "description": "Static SVG assets for icons/menu; no SMIL or path-draw animations",
+      "params": {
+        "animation_method": "none",
+        "path_morphing": "false",
+        "stroke_animation": "false",
+        "filter_effects": "false"
+      }
+    },
+    "composite_notes": "Primary spectacle is the fixed R3F neural background (800 additive particles, 12 splines, bloom intensity 0.6) behind a glass navbar and surface cards. CSS adds radial washes, optional low-opacity scanline/grid (0.03–0.06), gradient-clipped titles, and cyan glow hovers. Keep particle count ≤800. Align neuralColor hexes to tokens #22D3EE / #3B82F6 / #7C3AED. Compact type only — root 16px, hero clamp ≤2.65rem."
+  }
+}

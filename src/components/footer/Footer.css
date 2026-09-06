@@ -1,10 +1,22 @@
-.footer {
+﻿.footer {
   margin: 40px 80px 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-top: 1px solid var(--border);
   padding-top: 28px;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 120px;
+  height: 1px;
+  background: var(--gradient-brand);
+  opacity: 0.7;
 }
 
 .footer-top {

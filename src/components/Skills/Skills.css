@@ -1,4 +1,4 @@
-.skills {
+﻿.skills {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +46,24 @@
   flex-direction: column;
   width: 48%;
   gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  opacity: 0.85;
 }
 
 .skill-left {
@@ -146,6 +164,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+.card-certificate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-brand);
+  opacity: 0.7;
+  z-index: 2;
+}
+
 .card-certificate:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-glow), var(--shadow-card);
@@ -176,6 +206,7 @@
   transition: opacity 0.3s ease;
   text-align: center;
   padding: 12px;
+  z-index: 1;
 }
 
 .card-certificate:hover span {

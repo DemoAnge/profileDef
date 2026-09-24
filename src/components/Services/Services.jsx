@@ -1,49 +1,41 @@
 import "./Services.css"
 import { HiOutlineCodeBracket, HiOutlineServerStack, HiOutlineCircleStack } from "react-icons/hi2"
+import { useI18n } from "../../i18n/LanguageContext"
 
-const capabilities = [
-  {
-    title: "Front-end",
-    text: "I bring React and Angular UI work to a team — clear components, accessible layouts, and features that are ready for review and handover.",
-    Icon: HiOutlineCodeBracket,
-  },
-  {
-    title: "Back-end",
-    text: "I contribute Node.js and Django API work — authentication, validation, and reliable server-side logic that supports product and internal tools.",
-    Icon: HiOutlineServerStack,
-  },
-  {
-    title: "APIs & databases",
-    text: "I connect REST APIs to relational data (MySQL, Oracle) — models, queries, and end-to-end delivery from UI through data layer.",
-    Icon: HiOutlineCircleStack,
-  },
+const capabilityMeta = [
+  { id: "frontend", Icon: HiOutlineCodeBracket },
+  { id: "apis", Icon: HiOutlineServerStack },
+  { id: "data", Icon: HiOutlineCircleStack },
 ]
 
 const Services = () => {
+  const { t } = useI18n()
+
   return (
     <section id="services" className="services section">
       <div className="section-head center">
-        <span className="section-kicker">Capabilities</span>
+        <span className="section-kicker">{t.services.kicker}</span>
         <h2 className="section-title">
-          How I <span className="accent">work</span>
+          {t.services.title} <span className="accent">{t.services.accent}</span>
         </h2>
-        <p className="section-sub">
-          What I bring to an engineering team — full-stack delivery from UI to API and data, with honest scope.
-        </p>
+        <p className="section-sub">{t.services.sub}</p>
       </div>
 
       <div className="services-grid">
-        {capabilities.map(({ title, text, Icon }) => (
-          <article key={title} className="service-card card">
-            <div className="service-icon-wrap" aria-hidden>
-              <div className="service-diamond">
-                <Icon size={22} />
+        {capabilityMeta.map(({ id, Icon }) => {
+          const item = t.services.items[id]
+          return (
+            <article key={id} className="service-card card">
+              <div className="service-icon-wrap" aria-hidden>
+                <div className="service-diamond">
+                  <Icon size={22} />
+                </div>
               </div>
-            </div>
-            <h3 className="service-title">{title}</h3>
-            <p className="service-text">{text}</p>
-          </article>
-        ))}
+              <h3 className="service-title">{item.title}</h3>
+              <p className="service-text">{item.text}</p>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

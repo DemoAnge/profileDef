@@ -89,11 +89,14 @@
   color: var(--text);
   text-decoration: none;
   transition: color 0.2s ease;
-  word-break: break-all;
 }
 
 .contact-mailto:hover {
   color: var(--accent);
+}
+
+.contact-mailto[href^="mailto:"] {
+  word-break: break-all;
 }
 
 .contact-social {

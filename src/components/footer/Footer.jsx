@@ -1,13 +1,16 @@
 import "./Footer.css"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
+import { useI18n } from "../../i18n/LanguageContext"
 
 const Footer = () => {
+  const { t } = useI18n()
+
   return (
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
           <span className="footer-mark">AP</span>
-          <p>Full-stack web apps with React, Angular, Node.js, and Django.</p>
+          <p>{t.footer.blurb}</p>
         </div>
         <div className="footer-social">
           <a href="https://github.com/DemoAnge" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -17,9 +20,7 @@ const Footer = () => {
             <FaLinkedinIn size={16} />
           </a>
         </div>
-        <p className="footer-copy">
-          © 2026 Angel Pilamunga · All rights reserved
-        </p>
+        <p className="footer-copy">{t.footer.copy}</p>
       </div>
     </footer>
   )

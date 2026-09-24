@@ -1,21 +1,25 @@
-﻿import { useState } from "react"
+import { useState } from "react"
 import "./Contact.css"
-import { HiOutlineMapPin, HiOutlineEnvelope } from "react-icons/hi2"
+import { HiOutlineMapPin, HiOutlineEnvelope, HiOutlinePhone } from "react-icons/hi2"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
+import { useI18n } from "../../i18n/LanguageContext"
 
 const ACCESS_KEY = "09c0e377-922b-46e0-b2d2-2f3d9b4fc71e"
 const EMAIL = "angelpilamunga2098@gmail.com"
+const PHONE = "+593 962 984 732"
+const PHONE_HREF = "tel:+593962984732"
 const GITHUB_URL = "https://github.com/DemoAnge"
 const LINKEDIN_URL = "https://www.linkedin.com/in/angel-pilamunga-30a758133/"
 
 const Contact = () => {
-  const [status, setStatus] = useState("idle") // idle | sending | success | error
+  const { t } = useI18n()
+  const [status, setStatus] = useState("idle")
   const [statusMessage, setStatusMessage] = useState("")
 
   const onSubmit = async (event) => {
     event.preventDefault()
     setStatus("sending")
-    setStatusMessage("Sending…")
+    setStatusMessage(t.contact.sending)
 
     const formData = new FormData(event.target)
     const requiredFields = ["name", "email", "message"]
@@ -26,7 +30,7 @@ const Contact = () => {
 
     if (!hasAllFields) {
       setStatus("error")
-      setStatusMessage("Please fill out all required fields.")
+      setStatusMessage(t.contact.required)
       return
     }
 
@@ -40,40 +44,36 @@ const Contact = () => {
       const data = await response.json()
       if (data.success) {
         setStatus("success")
-        setStatusMessage("Message sent successfully. I'll get back to you soon.")
+        setStatusMessage(t.contact.success)
         event.target.reset()
       } else {
         setStatus("error")
-        setStatusMessage(data.message || "Something went wrong. Please try again.")
+        setStatusMessage(data.message || t.contact.error)
       }
-    } catch (error) {
+    } catch {
       setStatus("error")
-      setStatusMessage("Error sending message. Please try again later.")
+      setStatusMessage(t.contact.network)
     }
   }
 
   return (
     <section id="contact" className="contact section">
       <div className="section-head">
-        <span className="section-kicker">Contact</span>
+        <span className="section-kicker">{t.contact.kicker}</span>
         <h2 className="section-title">
-          Let&apos;s <span className="accent">work together</span>
+          {t.contact.title} <span className="accent">{t.contact.accent}</span>
         </h2>
       </div>
 
       <div className="contact-section">
         <aside className="contact-left card">
           <div className="contact-left-top">
-            <h3 className="contact-headline">
-              Have a role or project in mind?
-            </h3>
-            <p className="contact-lead">
-              Tell me about the opportunity — I read every message and reply as soon as I can.
-            </p>
+            <h3 className="contact-headline">{t.contact.headline}</h3>
+            <p className="contact-lead">{t.contact.lead}</p>
             <div className="contact-chips">
               <span className="contact-chip contact-chip--live">
                 <span className="contact-chip-dot" aria-hidden />
-                Open to Junior / Semi-Senior full-stack roles
+                {t.contact.chip}
               </span>
             </div>
           </div>
@@ -81,8 +81,12 @@ const Contact = () => {
           <div className="contact-meta">
             <div className="contact-detail">
               <HiOutlineMapPin size={16} aria-hidden />
-              <span>Ambato, Ecuador</span>
+              <span>{t.contact.location}</span>
             </div>
+            <a className="contact-detail contact-mailto" href={PHONE_HREF}>
+              <HiOutlinePhone size={16} aria-hidden />
+              <span>{PHONE}</span>
+            </a>
             <a className="contact-detail contact-mailto" href={`mailto:${EMAIL}`}>
               <HiOutlineEnvelope size={16} aria-hidden />
               <span>{EMAIL}</span>
@@ -115,11 +119,11 @@ const Contact = () => {
 
         <form onSubmit={onSubmit} className="contact-right card" noValidate>
           <div className="contact-field">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t.contact.name}</label>
             <input
               id="name"
               type="text"
-              placeholder="Your name"
+              placeholder={t.contact.namePh}
               name="name"
               required
               autoComplete="name"
@@ -127,24 +131,24 @@ const Contact = () => {
             />
           </div>
           <div className="contact-field">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t.contact.email}</label>
             <input
               id="email"
               type="email"
               required
-              placeholder="you@email.com"
+              placeholder={t.contact.emailPh}
               name="email"
               autoComplete="email"
               disabled={status === "sending"}
             />
           </div>
           <div className="contact-field">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t.contact.message}</label>
             <textarea
               id="message"
               name="message"
               rows={4}
-              placeholder="How can I help?"
+              placeholder={t.contact.messagePh}
               required
               disabled={status === "sending"}
             />
@@ -165,7 +169,7 @@ const Contact = () => {
             className="contact-submit"
             disabled={status === "sending"}
           >
-            {status === "sending" ? "Sending…" : "Send message"}
+            {status === "sending" ? t.contact.sending : t.contact.send}
           </button>
         </form>
       </div>
@@ -174,4 +178,3 @@ const Contact = () => {
 }
 
 export default Contact
-

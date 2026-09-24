@@ -1,13 +1,16 @@
 import "./About.css"
 import me from "../../assets/me.jpeg"
+import { useI18n } from "../../i18n/LanguageContext"
 
 const About = () => {
+  const { t } = useI18n()
+
   return (
     <section id="about" className="about section">
       <div className="section-head">
-        <span className="section-kicker">About</span>
+        <span className="section-kicker">{t.about.kicker}</span>
         <h2 className="section-title">
-          A bit about <span className="accent">who I am</span>
+          {t.about.title} <span className="accent">{t.about.accent}</span>
         </h2>
       </div>
 
@@ -18,19 +21,11 @@ const About = () => {
 
         <div className="about-body card">
           <div className="about-para">
-            <p>
-              Full-Stack Software Engineer with about one year of hands-on experience building web apps for cooperatives and university research in Ambato, Ecuador. B.Sc. in Software Engineering from Universidad Técnica de Ambato (UTA, 2020–2025). Actively looking for Junior or Semi-Senior full-stack roles, remote or local.
-            </p>
-            <p>
-              Day-to-day work covers React and Angular front ends, Node.js and Django REST APIs, and relational databases (MySQL, Oracle). Ships features end to end: UI, API, data model, and handover docs. Also held an IT support and security operations role at a cooperative — operations work, not full-stack development.
-            </p>
-            <p>
-              Recent work includes the FISEI faculty inventory system that replaced spreadsheet workflows, Angular document-management modules at Mushuc Runa, and a modular WEEE (RAEE) traceability research architecture that supported a peer-reviewed paper. TypeScript, Docker, and .NET/C# (with SQL Server) are familiar at a basic level — not areas I claim as expert.
-            </p>
+            <p>{t.about.p1}</p>
+            <p>{t.about.p2}</p>
           </div>
           <div className="about-meta">
-            <span className="meta-chip">EN · B1 Intermediate</span>
-            <span className="meta-chip">Ambato, EC</span>
+            <span className="meta-chip">{t.about.location}</span>
           </div>
         </div>
       </div>

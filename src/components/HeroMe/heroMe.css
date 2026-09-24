@@ -1,9 +1,6 @@
 .hero {
   min-height: calc(100vh - var(--nav-h));
-  display: flex;
-  align-items: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  justify-content: center;
 }
 
 .hero-grid {

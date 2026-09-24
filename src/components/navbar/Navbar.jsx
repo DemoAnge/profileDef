@@ -2,19 +2,21 @@ import "./navbar.css"
 import { useRef, useState, useEffect } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { HiBars3, HiXMark } from "react-icons/hi2"
+import { useI18n } from "../../i18n/LanguageContext"
 
-const links = [
-  { id: "home", label: "Home", offset: 0 },
-  { id: "about", label: "About", offset: 50 },
-  { id: "project", label: "Portfolio", offset: 50 },
-  { id: "experience", label: "Experience", offset: 50 },
-  { id: "skill", label: "Skills", offset: 50 },
-  { id: "services", label: "Capabilities", offset: 50 },
-  { id: "extras", label: "Extras", offset: 50 },
-  { id: "contact", label: "Contact", offset: 50 },
+const linkItems = [
+  { id: "home", offset: 0 },
+  { id: "about", offset: 50 },
+  { id: "project", offset: 50 },
+  { id: "experience", offset: 50 },
+  { id: "skill", offset: 50 },
+  { id: "services", offset: 50 },
+  { id: "extras", offset: 50 },
+  { id: "contact", offset: 50 },
 ]
 
 const Navbar = () => {
+  const { t, lang, setLang } = useI18n()
   const [menu, setMenu] = useState("home")
   const [open, setOpen] = useState(false)
   const menuRef = useRef(null)
@@ -45,36 +47,60 @@ const Navbar = () => {
         <span className="nav-brand-text">Angel Pilamunga</span>
       </a>
 
-      <button
-        type="button"
-        className="nav-burger"
-        aria-label={open ? "Close menu" : "Open menu"}
-        onClick={() => setOpen((v) => !v)}
-      >
-        {open ? <HiXMark size={22} /> : <HiBars3 size={22} />}
-      </button>
-
       <nav ref={menuRef} className={`nav-menu${open ? " open" : ""}`} aria-label="Primary">
         <ul>
-          {links.map(({ id, label, offset }) => (
-            <li key={id}>
-              <AnchorLink
-                className={`nav-link${menu === id ? " active" : ""}`}
-                offset={offset}
-                href={`#${id}`}
-                onClick={() => handleNav(id)}
-                title={label}
-              >
-                {label}
-              </AnchorLink>
-            </li>
-          ))}
+          {linkItems.map(({ id, offset }) => {
+            const label = t.nav[id]
+            return (
+              <li key={id}>
+                <AnchorLink
+                  className={`nav-link${menu === id ? " active" : ""}`}
+                  offset={offset}
+                  href={`#${id}`}
+                  onClick={() => handleNav(id)}
+                  title={label}
+                >
+                  {label}
+                </AnchorLink>
+              </li>
+            )
+          })}
         </ul>
       </nav>
 
-      <AnchorLink className="nav-cta" offset={50} href="#contact" title="Get in touch">
-        Get in touch
-      </AnchorLink>
+      <div className="nav-end">
+        <div className="lang-switch" role="group" aria-label={t.nav.lang}>
+          <button
+            type="button"
+            className={lang === "en" ? "active" : ""}
+            onClick={() => setLang("en")}
+            aria-pressed={lang === "en"}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={lang === "es" ? "active" : ""}
+            onClick={() => setLang("es")}
+            aria-pressed={lang === "es"}
+          >
+            ES
+          </button>
+        </div>
+
+        <AnchorLink className="nav-cta" offset={50} href="#contact" title={t.nav.cta}>
+          {t.nav.cta}
+        </AnchorLink>
+
+        <button
+          type="button"
+          className="nav-burger"
+          aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <HiXMark size={22} /> : <HiBars3 size={22} />}
+        </button>
+      </div>
     </header>
   )
 }

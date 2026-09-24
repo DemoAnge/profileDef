@@ -72,6 +72,11 @@ body {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 88px 24px;
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: var(--nav-h);
 }
 
 .section-head {
@@ -124,6 +129,17 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-sm);
+}
+
+.section > .about-layout,
+.section > .experience-timeline,
+.section > .proyects-grid,
+.section > .skills-icons,
+.section > .services-grid,
+.section > .contact-section,
+.section > .extras-zigzag,
+.section > .hero-grid {
+  width: 100%;
 }
 
 @media (max-width: 768px) {

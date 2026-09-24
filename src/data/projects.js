@@ -26,7 +26,7 @@ const projects_data = [
   },
   {
     id: "raee",
-    technologies: ["Python", "PRISMA", "Bibliometrics"],
+    technologies: ["Python", "Modular Architecture", "IoT (evaluation)"],
     img: [network2],
     url: "",
   },

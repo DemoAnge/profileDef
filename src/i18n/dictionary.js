@@ -56,22 +56,22 @@ export const dictionary = {
           participation: "Full-stack — React, Django, MySQL, Tailwind, RESTful API, Python.",
         },
         mushuc: {
-          title: "Document Process Map — Mushuc Runa",
+          title: "Document Process Map — Mushuc Runa (2024)",
           description:
-            "Document-management modules with department access rules. Workflows that used to run by hand now run in the app.",
-          participation: "Junior full-stack — Angular process map modules.",
+            "Web modules for document management and department access restrictions at Cooperativa Mushuc Runa Ltda.",
+          participation: "Front-end modules in Angular; production fixes as junior contributor.",
         },
         raee: {
-          title: "RAEE Traceability Model",
+          title: "RAEE / WEEE Traceability Research Platform (2024–2025)",
           description:
-            "Research model for RAEE / circular economy with PRISMA and bibliometrics. Peer-reviewed academic publication.",
-          participation: "Architecture, research software, and academic publication.",
+            "Modular research architecture for electronic-waste (RAEE) traceability across five phases. Evaluated IoT data capture and ledger-style integrity as design options. Work supported a peer-reviewed publication.",
+          participation: "Architecture, research implementation, and technical writing for the paper.",
         },
         cnn: {
           title: "CNN Clothing Color Recognition",
           description:
-            "Camera UI plus a convolutional model for garment color detection. Training, testing, and live inference in Python.",
-          participation: "Model pipeline and camera interface.",
+            "Convolutional model with a camera UI for garment color detection. YOLO-assisted pipeline built in Python for training, testing, and real-time camera inference.",
+          participation: "Model training/testing and camera interface.",
         },
       },
     },
@@ -137,7 +137,7 @@ export const dictionary = {
       kicker: "Extras",
       title: "Certificates",
       accent: "& credentials",
-      sub: "Training aligned with the ATS CV 2026.",
+      sub: "SUDEN, Cisco, PETI, and imaged credentials — security, networking, AI, and technical training.",
       close: "Close certificate",
       view: "View certificate",
       items: {
@@ -146,7 +146,7 @@ export const dictionary = {
         pythonEssentials: "Python Essentials 2 — Cisco (2024)",
         peti: "PETI",
         elementsAi: "Elements of AI",
-        iso27001: "ISO 27001 Auditor",
+        iso27001: "Auditor ISO 27001",
         ethicalHacking: "Ethical Hacking",
         hackingWifi: "Hacking Wi-Fi",
       },
@@ -234,22 +234,22 @@ export const dictionary = {
           participation: "Full-stack — React, Django, MySQL, Tailwind, API RESTful, Python.",
         },
         mushuc: {
-          title: "Mapa de procesos documentales — Mushuc Runa",
+          title: "Mapa de procesos documentales — Mushuc Runa (2024)",
           description:
-            "Módulos de gestión documental con reglas de acceso por departamento. Lo que antes iba a mano ahora corre en la aplicación.",
-          participation: "Full-stack junior: Mapa de Proceso en Angular.",
+            "Módulos web para gestión documental y restricciones de acceso por departamento en Cooperativa Mushuc Runa Ltda.",
+          participation: "Módulos front-end en Angular; correcciones en producción como colaborador junior.",
         },
         raee: {
-          title: "Modelo de trazabilidad RAEE",
+          title: "Plataforma de investigación de trazabilidad RAEE / WEEE (2024–2025)",
           description:
-            "Modelo de investigación RAEE / economía circular con PRISMA y bibliometría. Publicación académica con revisión de pares.",
-          participation: "Arquitectura, software de investigación y publicación académica.",
+            "Arquitectura de investigación modular para la trazabilidad de residuos de aparatos eléctricos y electrónicos (RAEE) en cinco fases. Se evaluaron la captura de datos IoT y la integridad tipo ledger como opciones de diseño. El trabajo respaldó una publicación con revisión de pares.",
+          participation: "Arquitectura, implementación de investigación y redacción técnica del artículo.",
         },
         cnn: {
           title: "Reconocimiento de color en prendas (CNN)",
           description:
-            "Interfaz de cámara y modelo convolucional para detectar el color de una prenda. Entrenamiento, prueba e inferencia en vivo en Python.",
-          participation: "Pipeline del modelo e interfaz de cámara.",
+            "Modelo convolucional con interfaz de cámara para detectar el color de prendas. Pipeline asistido por YOLO en Python para entrenamiento, prueba e inferencia en tiempo real con cámara.",
+          participation: "Entrenamiento/prueba del modelo e interfaz de cámara.",
         },
       },
     },
@@ -315,7 +315,7 @@ export const dictionary = {
       kicker: "Extras",
       title: "Certificados",
       accent: "y credenciales",
-      sub: "Formación alineada con el CV ATS 2026.",
+      sub: "SUDEN, Cisco, PETI y credenciales con imagen — seguridad, redes, IA y formación técnica.",
       close: "Cerrar certificado",
       view: "Ver certificado",
       items: {

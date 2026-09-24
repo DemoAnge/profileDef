@@ -1,14 +1,21 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react"
 import "./Extras.css"
+import cert1 from "../../assets/certificate/auditor.png"
+import cert2 from "../../assets/certificate/iaelements.png"
 import cert3 from "../../assets/certificate/tecnic.png"
 import cert4 from "../../assets/certificate/redes.png"
+import cert5 from "../../assets/certificate/eticalhac.png"
+import cert6 from "../../assets/certificate/hack.png"
 import { useI18n } from "../../i18n/LanguageContext"
 
-// CV ATS 2026 certs with image assets in repo. Python Essentials 2 + PETI
-// are named in i18n but omitted here (no certificate images available).
+// Certs with image assets in repo. pythonEssentials + peti stay i18n-only (no blank cards).
 const certs = [
+  { id: "iso27001", img: cert1 },
+  { id: "elementsAi", img: cert2 },
   { id: "sudenTech", img: cert3 },
   { id: "sudenNet", img: cert4 },
+  { id: "ethicalHacking", img: cert5 },
+  { id: "hackingWifi", img: cert6 },
 ]
 
 const FOCUSABLE =

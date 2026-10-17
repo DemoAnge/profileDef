@@ -3,7 +3,7 @@ export const dictionary = {
     meta: {
       title: "Angel Pilamunga | Software Developer",
       description:
-        "I am a Full-Stack Software Developer in Ambato, Ecuador. I build end-to-end web apps with React, Node.js, and Django.",
+        "I am a Full-Stack Software Developer in Ambato, Ecuador. I build web applications with the technologies each project needs: React, Angular, Node.js, C#, and PostgreSQL.",
     },
     nav: {
       home: "Home",
@@ -20,8 +20,9 @@ export const dictionary = {
       lang: "Language",
     },
     hero: {
-      kicker: "Software Developer · Ambato, Ecuador",
-      lead: "I am a Full-Stack Software Developer with more than 1 year of production experience delivering end-to-end web applications with React, Node.js, and Django. I build and ship features in real environments, design RESTful APIs used by multiple teams, and lead full delivery cycles from architecture to deployment.",
+      kicker: "Hi, I'm",
+      role: "Software Developer · Ambato, Ecuador",
+      lead: "I develop modern web applications end to end, integrating front end, back end, REST APIs, and databases with the technologies each project needs: React, Angular, Node.js, C#, and PostgreSQL.",
       cta: "Contact",
       portfolio: "Portfolio",
     },
@@ -29,7 +30,7 @@ export const dictionary = {
       kicker: "About",
       title: "Software",
       accent: "profile",
-      p1: "I am a Full-Stack Software Developer with more than 1 year of production experience delivering end-to-end web applications with React, Node.js, and Django. I have built and deployed features in live environments, designed RESTful APIs consumed by multiple teams, and led full development cycles from architecture to deployment. I am looking for a Junior or Semi-Senior Software Developer role.",
+      p1: "I am a Full-Stack Software Developer, and I see every project I build as a challenge that helps me grow professionally and put my skills to the test. I am motivated by automating processes and turning manual tasks into digital solutions that optimize time and resources. I understand that each technology fits different kinds of processes better, so I choose the most suitable option based on each project's requirements, scope, and context. I led the development of an asset inventory management system, covering the full cycle: front end, APIs, database, and deployment. I also contributed to a process-map web system for a financial institution. I work with agile methodologies such as Scrum, and during my internship I gained knowledge of information security and data protection. I am currently collaborating on a web ERP for the floriculture sector and working on my own projects, including mobile applications.",
       p2: "I hold a B.Sc. in Software Engineering from Universidad Técnica de Ambato (2020–2025).",
       location: "Ambato, Ecuador",
     },
@@ -181,7 +182,7 @@ export const dictionary = {
     meta: {
       title: "Angel Pilamunga | Desarrollador de Software",
       description:
-        "Soy desarrollador de Software Full-Stack en Ambato, Ecuador. Creo aplicaciones web de extremo a extremo con React, Node.js y Django.",
+        "Soy desarrollador de Software Full-Stack en Ambato, Ecuador. Construyo aplicaciones web con las tecnologías que cada proyecto necesita: React, Angular, Node.js, C# y PostgreSQL.",
     },
     nav: {
       home: "Inicio",
@@ -198,8 +199,9 @@ export const dictionary = {
       lang: "Idioma",
     },
     hero: {
-      kicker: "Desarrollador de Software · Ambato, Ecuador",
-      lead: "Soy desarrollador de Software Full-Stack con más de 1 año de experiencia en producción, entregando aplicaciones web de extremo a extremo con React, Node.js y Django. Construyo y despliego funcionalidades en entornos reales, diseño APIs RESTful consumidas por varios equipos y lidero ciclos completos de desarrollo desde la arquitectura hasta el despliegue.",
+      kicker: "Hola, soy",
+      role: "Desarrollador de Software · Ambato, Ecuador",
+      lead: "Desarrollo aplicaciones web modernas de punta a punta, integrando front-end, back-end, APIs REST y bases de datos con las tecnologías que cada proyecto necesita: React, Angular, Node.js, C# y PostgreSQL.",
       cta: "Contacto",
       portfolio: "Portafolio",
     },
@@ -207,7 +209,7 @@ export const dictionary = {
       kicker: "Perfil",
       title: "Perfil de",
       accent: "software",
-      p1: "Soy desarrollador de Software Full-Stack con más de 1 año de experiencia en producción, entregando aplicaciones web de extremo a extremo con React, Node.js y Django. He construido y desplegado funcionalidades en entornos reales, diseñado APIs RESTful consumidas por varios equipos y liderado ciclos completos desde la arquitectura hasta el despliegue. Busco un rol como Desarrollador de Software Junior o Semi-Senior.",
+      p1: "Soy desarrollador de Software Full-Stack y considero que cada desarrollo de proyecto es un desafío que me permite crecer profesionalmente y poner a prueba mis habilidades. Me motiva automatizar procesos y transformar tareas manuales en soluciones digitales que optimicen tiempo y recursos. Entiendo que cada tecnología responde mejor a distintos tipos de procesos, por lo que selecciono la opción más adecuada según los requerimientos, el alcance y el contexto de cada proyecto. Lideré el desarrollo de un sistema de gestión de inventario de activos, abarcando el ciclo completo: front-end, APIs, base de datos y despliegue. También participé en el desarrollo de un sistema web de mapa de procesos para una entidad financiera. Trabajo con metodologías ágiles como Scrum y, durante mis prácticas, adquirí conocimientos en seguridad de la información y protección de datos. Actualmente colaboro en el desarrollo de un ERP web para el sector florícola y trabajo en proyectos propios, incluidas aplicaciones móviles.",
       p2: "Ingeniería en Software, Universidad Técnica de Ambato (2020–2025).",
       location: "Ambato, Ecuador",
     },

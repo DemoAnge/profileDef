@@ -27,8 +27,15 @@
   letter-spacing: var(--tracking-tight);
   line-height: 1.15;
   color: var(--text);
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   max-width: 18ch;
+}
+
+.hero-role {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
 }
 
 .hero-accent {

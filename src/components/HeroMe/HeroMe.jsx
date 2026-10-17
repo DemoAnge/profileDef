@@ -12,6 +12,7 @@ const HeroMe = () => {
         <div className="hero-copy">
           <span className="hero-kicker">{t.hero.kicker}</span>
           <h1 className="hero-name">Angel Pilamunga</h1>
+          <p className="hero-role">{t.hero.role}</p>
           <p className="hero-lead">{t.hero.lead}</p>
           <div className="hero-actions">
             <a href="#contact" className="btn-primary">{t.hero.cta}</a>
